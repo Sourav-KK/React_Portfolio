@@ -4,6 +4,8 @@ import Nav from "./Components/Nav";
 import Testimonial from "./Components/Testimonial";
 import Footer from "./Components/Footer";
 import Projects from "./Components/Projects";
+import Skills from "./Components/Skills";
+import Real_Skills from "./Components/Real_Skills";
 
 function App() {
   return (
@@ -11,6 +13,9 @@ function App() {
       <Nav />
       <Hero />
       {/* <Main /> */}
+      <Skills />
+
+      <Real_Skills />
       <Projects />
       <Testimonial />
       <Footer />
