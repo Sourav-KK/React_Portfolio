@@ -2,7 +2,7 @@
 import { AiOutlineClose } from "react-icons/ai";
 import { HiMenuAlt1 } from "react-icons/hi";
 import { useState } from "react";
-import Logo from "../assets/canvajps-removebg-preview.png";
+import Logo from "../assets/removeBG.png";
 import AnchorTag from "../Utils/AnchorTag";
 
 const Nav = () => {
@@ -23,11 +23,11 @@ const Nav = () => {
   return (
     <>
       <nav className="flex items-center justify-between p-3 lg:flex-row text-white ">
-        <div className="div">
+        <div className="">
           <img
             src={Logo}
             alt="logo"
-            className="h-16 w-16 hover:cursor-pointer"
+            className="h-16 w-16 hover:cursor-pointer hover:scale-150 animate-bounce hover:animate-pulse"
           />
         </div>
         <div className="space-x-4">

@@ -8,7 +8,22 @@ export default {
       md: "768px",
       lg: "1024px",
     },
-    extend: {},
+
+    extend: {
+      colors: {
+        tatti: "#0496FF",
+        project1_main: "#141C3A",
+      },
+      animation: {
+        "infinite-scroll": "infinite-scroll 25s linear infinite",
+      },
+      keyframes: {
+        "infinite-scroll": {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-100%)" },
+        },
+      },
+    },
   },
   plugins: [],
 };

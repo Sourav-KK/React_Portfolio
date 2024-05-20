@@ -15,6 +15,8 @@ import { SiCss3 } from "react-icons/si";
 import { FaBootstrap } from "react-icons/fa6";
 import { BiLogoPostgresql } from "react-icons/bi";
 import { FaGithub } from "react-icons/fa6";
+import { FaAnglesRight } from "react-icons/fa6";
+
 export {
   IoLogoJavascript,
   SiExpress,
@@ -32,5 +34,6 @@ export {
   SiCss3,
   FaBootstrap,
   BiLogoPostgresql,
-  FaGithub
+  FaGithub,
+  FaAnglesRight,
 };
