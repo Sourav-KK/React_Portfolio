@@ -20,7 +20,7 @@ const Nav = () => {
 
   return (
     <>
-      <nav className="flex items-center justify-between p-3 lg:flex-row text-white">
+      <nav className="flex items-center justify-between p-3 lg:flex-row text-white font-mono">
         <div className="">
           <img
             src={Logo}

@@ -61,20 +61,21 @@ const Projects = () => {
   }
 
   return (
-    <div className="bg-blue-950 rounded-md m-20 max-w-full">
-      <div className="grid justify-items-center m-10 gap-y-2">
-        <h1 className="text-3xl text-stone-700 mt-10">Projects</h1>
-        <h1>
+    <div className="bg-cream rounded-md  max-w-full">
+      <div className="grid justify-items-center  gap-y-2">
+        <h1 className="text-3xl text-stone-700 mt-10 uppercase p-3 font-mono">
+          Projects
+        </h1>
+        <h1 className="text-center">
           Here are some of the hard worked project. Visit my
           <a href="#" className="underline text-blue-400 hover:text-blue-700">
             {" "}
             Github{" "}
           </a>
-          to see more{" "}
+          for more{" "}
         </h1>
-        <p>❤ Dont forget to support me ❤</p>
       </div>
-      <div className="grid md:grid-cols-3 grid-cols-1 p-5 gap-7 ">
+      <div className="grid md:grid-cols-3 grid-cols-1 p-5 pl-20 pr-20 pb-20 gap-7 ">
         {projectDetails.map((project, index) => (
           <div
             className={` transition-all ease-in-out duration-700 h-36 border-2 rounded-lg border-cyan-600 p-3 flex justify-center

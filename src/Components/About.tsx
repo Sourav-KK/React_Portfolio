@@ -5,8 +5,8 @@ const About = () => {
         <h1 className="uppercase p-3 font-mono">About</h1>
       </div>
 
-      <div className="grid grid-cols-1 gap-1 pb-5 pt-5 text-slate-900">
-        <p className="p-3">
+      <div className="grid grid-cols-1 gap-1 pb-5 pt-5 text-slate-900 ">
+        <p className="p-3 text-lg">
           Hello! I'm <strong>Sourav</strong>, a self-taught{" "}
           <strong>MERN stack</strong> web developer hailing from{" "}
           <strong>Kochi, Kerala, India</strong>. My journey in web development
@@ -14,7 +14,7 @@ const About = () => {
           and the myriad components that drive the digital era.
         </p>
 
-        <p className="p-3">
+        <p className="p-3 text-lg">
           While my expertise lies in front-end development with React, I am
           equally prepared and eager to dive into backend challenges,
           particularly with Node.js. This dual capability is not only a
@@ -22,7 +22,7 @@ const About = () => {
           with the fast-paced growth of development tools and practices.
         </p>
 
-        <p className="p-3">
+        <p className="p-3 text-lg">
           As a proactive learner ready to embrace the multifaceted roles of a
           web developer, I am actively seeking opportunities to step into the
           industry. Whether you're a recruiter in search of a versatile fresh
@@ -30,7 +30,7 @@ const About = () => {
           like to chat, I'm open to messages and ready to join forces.
         </p>
 
-        <p className="p-3">
+        <p className="p-3 text-lg">
           If you're venturing into the digital space with an app or web
           development project and need a freelance developer, or if you're a
           developer keen on a joint creative effort, or simply want to exchange

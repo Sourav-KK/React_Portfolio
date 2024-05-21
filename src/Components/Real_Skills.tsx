@@ -7,7 +7,6 @@ import {
   SiTypescript,
   BiLogoPostgresql,
 } from "../Utils/React-icons";
-// import { Other_skils } from "../Utils/Constants";
 import Skill_Scroll from "./Skill_Scroll";
 const Real_Skills = () => {
   const skillsIcon = [
@@ -40,25 +39,8 @@ const Real_Skills = () => {
         ))}
       </div>
 
-      {/* <div className="flex flex-wrap justify gap-x-3 ">
-        {Other_skils.map((skill, index) => (
-          <div
-            className="flex bg-sky-900 justify-around rounded-lg p-2"
-            key={index}
-          >
-            <div className="flex">
-              <skill.Icon size={20} color="white" />
-            </div>
-            <div className="flex">
-              <p className="text-white">{skill.Title}</p>
-            </div>
-          </div>
-        ))}
-      </div> */}
-
       <>
-      <Skill_Scroll />
-      
+        <Skill_Scroll />
       </>
     </div>
   );

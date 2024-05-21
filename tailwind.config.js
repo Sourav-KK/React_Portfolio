@@ -13,6 +13,7 @@ export default {
       colors: {
         tatti: "#0496FF",
         project1_main: "#141C3A",
+        cream: "#EFE1BD",
       },
       animation: {
         "infinite-scroll": "infinite-scroll 32s linear infinite",
