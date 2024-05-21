@@ -15,7 +15,7 @@ export default {
         project1_main: "#141C3A",
       },
       animation: {
-        "infinite-scroll": "infinite-scroll 25s linear infinite",
+        "infinite-scroll": "infinite-scroll 32s linear infinite",
       },
       keyframes: {
         "infinite-scroll": {

@@ -4,12 +4,10 @@ import { HiMenuAlt1 } from "react-icons/hi";
 import { useState } from "react";
 import Logo from "../assets/removeBG.png";
 import AnchorTag from "../Utils/AnchorTag";
+import { AnchorStyle } from "../Utils/Constants";
 
 const Nav = () => {
   const [toggle, setToggle] = useState<boolean>(false);
-
-  const anchorStyle: string =
-    "text-white hover:bg-indigo-800 rounded-full px-5 py-2 text-xl transition-colors delay-800 ease-in";
 
   const titleArr = ["About", "Skills", "Projects", "Extras", "Contact"];
   const openMenu = () => {
@@ -22,12 +20,12 @@ const Nav = () => {
 
   return (
     <>
-      <nav className="flex items-center justify-between p-3 lg:flex-row text-white ">
+      <nav className="flex items-center justify-between p-3 lg:flex-row text-white">
         <div className="">
           <img
             src={Logo}
             alt="logo"
-            className="h-16 w-16 hover:cursor-pointer hover:scale-150 animate-bounce hover:animate-pulse"
+            className="h-20 w-20 hover:cursor-pointer hover:scale-105 hover:animate-pulse"
           />
         </div>
         <div className="space-x-4">
@@ -35,7 +33,8 @@ const Nav = () => {
             {titleArr.map((elem, index) => (
               <AnchorTag
                 link="#"
-                style={anchorStyle}
+                // style={AnchorStyle}
+                style={AnchorStyle}
                 title={elem}
                 key={index}
               />

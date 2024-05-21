@@ -12,7 +12,7 @@ const Footer = () => {
           <Linkedin />
         </a>
       </div>
-      <h5 className="text-xs font-light">© Copyright 2024 - Soup_loop</h5>
+      <h5 className="text-xs font-light">© Copyright 2024 - soup_loop</h5>
     </div>
   );
 };

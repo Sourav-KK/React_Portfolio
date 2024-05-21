@@ -17,6 +17,7 @@ import {
   BiLogoPostgresql,
   FaGithub,
 } from "../Utils/React-icons";
+import { Other_skils } from "./Constants";
 
 const InfinityScroll = ({ ariaVal }: { ariaVal: boolean }) => {
   const skillsIcons = [
@@ -43,7 +44,7 @@ const InfinityScroll = ({ ariaVal }: { ariaVal: boolean }) => {
       className="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll"
       aria-hidden={ariaVal}
     >
-      {skillsIcons.map((elem, index) => (
+      {Other_skils.map((elem, index) => (
         <>
           <li key={index}>
             <elem.Icon
@@ -52,6 +53,9 @@ const InfinityScroll = ({ ariaVal }: { ariaVal: boolean }) => {
               color="#eeeee4"
               className={`hover:scale-105`}
             />
+          </li>
+          <li className="text-sm font-mono font-light text-clip text-white">
+            {elem.Title}
           </li>
         </>
       ))}

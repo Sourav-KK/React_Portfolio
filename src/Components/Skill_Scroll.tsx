@@ -1,6 +1,6 @@
 import InfinityScroll from "../Utils/InfinityScroll";
 
-const SAmple = () => {
+const Skill_Scroll = () => {
   return (
     <div
       x-data="{}"
@@ -9,7 +9,7 @@ const SAmple = () => {
         ul.insertAdjacentHTML('afterend', ul.outerHTML);
         ul.nextSibling.setAttribute('aria-hidden', 'true');
     })"
-      className="bg-stone-700 p-7 w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]"
+      className="bg-transparent p-7 w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_40px,_black_calc(100%-40px),transparent_100%)]"
     >
       <InfinityScroll ariaVal={false} />
       <InfinityScroll ariaVal={true} />
@@ -18,4 +18,4 @@ const SAmple = () => {
   );
 };
 
-export default SAmple;
+export default Skill_Scroll;

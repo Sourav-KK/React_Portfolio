@@ -1,22 +1,31 @@
-import { IoLogoJavascript } from "react-icons/io5";
-import { SiTypescript } from "react-icons/si";
-import { FaNode } from "react-icons/fa";
-import { SiMongodb } from "react-icons/si";
-import { SiExpress } from "react-icons/si";
-import { IoLogoReact } from "react-icons/io5";
-import { SiJquery } from "react-icons/si";
-import { SiTailwindcss } from "react-icons/si";
-import { TiHtml5 } from "react-icons/ti";
-import { SiPostman } from "react-icons/si";
-import { SiRedux } from "react-icons/si";
-import { FaNpm } from "react-icons/fa6";
-import { FaGitAlt } from "react-icons/fa";
-import { SiCss3 } from "react-icons/si";
-import { FaBootstrap } from "react-icons/fa6";
+import { FaNpm, FaBootstrap, FaGithub, FaAnglesRight } from "react-icons/fa6";
 import { BiLogoPostgresql } from "react-icons/bi";
-import { FaGithub } from "react-icons/fa6";
-import { FaAnglesRight } from "react-icons/fa6";
-
+import { CiCircleChevDown, CiCircleChevUp } from "react-icons/ci";
+import { RiTailwindCssFill } from "react-icons/ri";
+import { TiHtml5 } from "react-icons/ti";
+import { FaNode, FaGitAlt } from "react-icons/fa";
+import {
+  IoLogoJavascript,
+  IoLogoReact,
+  IoLogoFirebase,
+  IoLogoFigma,
+} from "react-icons/io5";
+import {
+  SiPostman,
+  SiRedux,
+  SiTailwindcss,
+  SiTypescript,
+  SiMongodb,
+  SiExpress,
+  SiJquery,
+  SiCss3,
+  SiJsonwebtokens,
+  SiCanva,
+  SiAdobelightroom,
+  SiVite,
+  SiDaisyui,
+  SiReactrouter,
+} from "react-icons/si";
 export {
   IoLogoJavascript,
   SiExpress,
@@ -36,4 +45,15 @@ export {
   BiLogoPostgresql,
   FaGithub,
   FaAnglesRight,
+  RiTailwindCssFill,
+  SiJsonwebtokens,
+  IoLogoFirebase,
+  IoLogoFigma,
+  SiAdobelightroom,
+  SiCanva,
+  SiVite,
+  SiReactrouter,
+  SiDaisyui,
+  CiCircleChevDown,
+  CiCircleChevUp,
 };

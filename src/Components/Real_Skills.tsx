@@ -7,6 +7,8 @@ import {
   SiTypescript,
   BiLogoPostgresql,
 } from "../Utils/React-icons";
+// import { Other_skils } from "../Utils/Constants";
+import Skill_Scroll from "./Skill_Scroll";
 const Real_Skills = () => {
   const skillsIcon = [
     { Icon: SiMongodb, Title: "MongoDB" },
@@ -18,25 +20,46 @@ const Real_Skills = () => {
     { Icon: BiLogoPostgresql, Title: "PostgreSQL" },
   ];
   return (
-    <div className="bg-sky-800">
-      <div className="sdlk">
-        <h2 className="text-yellow-50 font-sans text-center text-xl underline font-semibold p-4">
-          {" "}
+    <div className="bg-sky-800 pt-20 pl-20 pr-20 pb-20 gap-y-5 flex justify-center flex-col">
+      <div className="flex justify-center items-center">
+        <h2 className="text-yellow-50 uppercase p-3 font-mono text-3xl text-center font-semibold">
           SKILLS
         </h2>
-        <div className="flex justify-evenly">
-          {skillsIcon.map((skill, index) => (
+      </div>
+      <div className="flex justify-evenly flex-wrap">
+        {skillsIcon.map((skill, index) => (
+          <>
             <div
               key={index}
-              className="flex justify-center hover:animate-pulse hover:scale-125"
+              className="flex justify-center hover:scale-105 flex-col items-center bg-sky-900 p-6 rounded-lg"
             >
               <skill.Icon title={skill.Title} size={40} color="#eeeee4" />
+              <p className="font-mono text-white">{skill.Title}</p>
             </div>
-          ))}
-        </div>
+          </>
+        ))}
       </div>
 
-      <div className="sdf"></div>
+      {/* <div className="flex flex-wrap justify gap-x-3 ">
+        {Other_skils.map((skill, index) => (
+          <div
+            className="flex bg-sky-900 justify-around rounded-lg p-2"
+            key={index}
+          >
+            <div className="flex">
+              <skill.Icon size={20} color="white" />
+            </div>
+            <div className="flex">
+              <p className="text-white">{skill.Title}</p>
+            </div>
+          </div>
+        ))}
+      </div> */}
+
+      <>
+      <Skill_Scroll />
+      
+      </>
     </div>
   );
 };
