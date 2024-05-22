@@ -6,28 +6,20 @@ const Typewrite = () => {
       <Typewriter
         onInit={(typewriter) => {
           typewriter
-            .typeString("Web developer")
-            .callFunction(() => {
-              console.log("String typed out!");
-            })
+            .typeString("Web Developer")
+
             .pauseFor(2000)
             .deleteAll()
-            .typeString("MERN stack developer")
-            .callFunction(() => {
-              console.log("All strings were deleted");
-            })
+            .typeString("MERN Stack Developer")
+
             .pauseFor(2000)
             .deleteAll()
-            .typeString("Backend developer")
-            .callFunction(() => {
-              console.log("String typed out!");
-            })
+            .typeString("Backend Developer")
+
             .pauseFor(2000)
             .deleteAll()
-            .typeString("Frontend developer")
-            .callFunction(() => {
-              console.log("String typed out!");
-            })
+            .typeString("Frontend Developer")
+
             .pauseFor(2000)
             .start();
         }}

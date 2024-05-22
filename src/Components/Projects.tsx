@@ -6,31 +6,44 @@ const Projects = () => {
     {
       title: "URL Shortner",
       link: "sdsd",
-      Description: "Long URL's shortned using React, Express.js & MongoDB",
+      Description: "A backend work to shorten lenghty URLs",
+      techs: ["Node.js", "Express.js", "MongoDB", "Mongoose"],
       state: false,
     },
     {
       title: "User Management",
       link: "sdsd",
-      Description: "Managing user roles using React, Express.js & MongoDB",
+      Description: "A interface to mointer & track users and their roles.",
+      techs: [
+        "Node.js",
+        "React",
+        "Express.js",
+        "MongoDB",
+        "Mongoose",
+        "Redux Toolkit",
+      ],
       state: false,
     },
     {
       title: "Netflix Clone",
       link: "sdsd",
-      Description: "A clone of Netflix using React, Hooks & APIs",
+      Description:
+        "A clone of the Netflix website using React by integrating API's",
+      techs: ["React", "Hooks", "APIs"],
       state: false,
     },
     {
       title: "Volta Ecommerce",
       link: "sdsd",
-      Description: "Ecommerce website using Node.js, Express.js & MongoDB",
+      Description: "Ecommerce website using Node.js",
+      techs: ["Node.js", "MongoDB", "Mongoose", "EJS", "Express.js"],
       state: false,
     },
     {
       title: "Todo",
       link: "sdsd",
-      Description: "Todo using React",
+      Description: "A simple Todo webapp using React",
+      techs: ["React", "Hooks", "APIs"],
       state: false,
     },
   ]);
@@ -51,58 +64,71 @@ const Projects = () => {
     );
   }
 
-  function redirectToWebsite(index: number) {
-    for (let i = 0; i < projectDetails.length; i++) {
-      if (i === index) {
-        const projectLink = projectDetails[i].link;
-        window.open(projectLink, "_blank");
-      }
-    }
+  function redirectToWebsite(link: string) {
+    window.open(link, "_blank");
   }
 
   return (
-    <div className="bg-cream rounded-md  max-w-full">
+    <div className="bg-cream-50 rounded-md  max-w-full">
       <div className="grid justify-items-center  gap-y-2">
-        <h1 className="text-3xl text-stone-700 mt-10 uppercase p-3 font-mono">
+        <h1 className="text-3xl text-stone-700 mt-10 uppercase p-3 font-mono font-bold">
           Projects
         </h1>
-        <h1 className="text-center">
-          Here are some of the hard worked project. Visit my
+        <h1 className="text-center font-mono">
+          For a broader showcase of my work, please visit my
           <a href="#" className="underline text-blue-400 hover:text-blue-700">
             {" "}
             Github{" "}
           </a>
-          for more{" "}
+          profile.
         </h1>
       </div>
+
       <div className="grid md:grid-cols-3 grid-cols-1 p-5 pl-20 pr-20 pb-20 gap-7 ">
-        {projectDetails.map((project, index) => (
-          <div
-            className={` transition-all ease-in-out duration-700 h-36 border-2 rounded-lg border-cyan-600 p-3 flex justify-center
-              ${project.state ? "bg-red-400" : "bg-slate-400"}`}
-            onMouseEnter={() => truthy(index)}
-            onMouseLeave={() => falsey(index)}
-            key={index}
-          >
-            {project.state ? (
+        {projectDetails.map((work, index) => (
+          <div className="grid grid-rows-2 p-4 h-auto rounded-lg bg-gray-50 shadow-2xl border-b-2 border-sky-800">
+            {work.state ? (
               <div
-                className={`grid grid-cols-1 content-center gap-y-4 justify-items-center w-3/4`}
+                key={index}
+                className="grid grid-rows-2 row-span-2 gap-1"
+                onMouseLeave={() => falsey(index)}
               >
-                <p className={`text-center`}>{project.Description}</p>
-                <button
-                  type="button"
-                  className="bg-transparent border-2 rounded-lg border-cyan-600 p-3 flex justify-around items-center w-4/6  hover:bg-tatti transition-colors duration-500 ease-linear"
-                  onClick={() => redirectToWebsite(index)}
+                <div className="flex font-mono ">
+                  <p className="">{work.Description}</p>
+                </div>
+                <div
+                  className="flex justify-center items-center"
+                  onClick={() => redirectToWebsite(work.link)}
                 >
-                  Visit Website
-                  <FaAnglesRight className="flex place-content-center" />
-                </button>
+                  <button
+                    type="button"
+                    className="flex justify-self-stretch w-34 border-4 border-cream-50 rounded-2xl p-2 font-mono text-sm hover:bg-cream-50 transition-colors duration-500 ease-in-out"
+                  >
+                    Visit site
+                    <FaAnglesRight className="grid self-center" />
+                  </button>
+                </div>
               </div>
             ) : (
-              <div className="flex justify-center place-items-center w-8/12">
-                <h1 className="w-full text-center">{project.title}</h1>
+              <div
+                className={`grid grid-cols-1 gap-2 hover:cursor-pointer row-span-2 h-32`}
+                onMouseEnter={() => truthy(index)}
+              >
+                <div className={`  `}>
+                  <h1 className="text-center">{work.title}</h1>
+                </div>
+                <div className="grid grid-cols-3 gap-1 text-sm font-mono h-10">
+                  {work.techs.map((tech, index) => (
+                    <p
+                      className="bg-cream-50 p-1 rounded-lg text-center"
+                      key={index}
+                    >
+                      {tech}
+                    </p>
+                  ))}
+                </div>
               </div>
-            )}
+            )}{" "}
           </div>
         ))}
       </div>

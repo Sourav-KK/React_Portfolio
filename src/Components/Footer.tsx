@@ -3,7 +3,7 @@ import { FaGithub } from "react-icons/fa6";
 
 const Footer = () => {
   return (
-    <div className="grid justify-center gap-y-4 bg-gray-900 text-white py-7">
+    <div className="grid justify-center gap-y-4 bg-neutral-900 text-white py-7">
       <div className="flex justify-evenly">
         <a href="#">
           <FaGithub size={25} />
