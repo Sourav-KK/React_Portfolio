@@ -5,11 +5,14 @@ import Footer from "./Components/Footer";
 import Projects from "./Components/Projects";
 import Real_Skills from "./Components/Real_Skills";
 import About from "./Components/About";
+// import Contact from "./Components/Contact";
+import Collapse from "./Components/Collapse";
+import Cards from "./Components/Cards";
 
 function App() {
   return (
-    <div>
-      <div className="bg-gradient-to-r from-violet-600 to-indigo-600 scrollbar-none">
+    <div className="bg-white">
+      <div className="bg-gradient-to-b from-cyan-600 via-teal-400 to-indigo-700 scrollbar-none">
         <Nav />
         <Hero />
       </div>
@@ -18,7 +21,10 @@ function App() {
 
       <Real_Skills />
       <Projects />
+      {/* <Contact /> */}
+      <Collapse/>
       <Testimonial />
+      <Cards/>
       <Footer />
     </div>
   );

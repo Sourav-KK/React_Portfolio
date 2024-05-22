@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+import daisyui from "daisyui";
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
@@ -16,7 +17,7 @@ export default {
         cream: {
           50: "#EFE1BD",
           100: "#e8d7ae",
-          150:"#cec5ad"
+          150: "#cec5ad",
         },
       },
       animation: {
@@ -30,5 +31,5 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [daisyui],
 };

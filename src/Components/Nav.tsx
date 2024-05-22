@@ -32,7 +32,6 @@ const Nav = () => {
             {titleArr.map((elem, index) => (
               <AnchorTag
                 link="#"
-                // style={AnchorStyle}
                 style={AnchorStyle}
                 title={elem}
                 key={index}

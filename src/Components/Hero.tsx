@@ -7,9 +7,9 @@ const Hero = () => {
       <div className="lg:w-1/3 ssm:w-fit grid gap-y-2">
         <p className="text-xl  text-slate-300 font-mono">Hi, my name is</p>
         <h1 className="text-4xl uppercase font-mono">Sourav </h1>
-        <p className=" text-xl text-slate-300 font-sans">
+        <div className=" text-xl text-slate-300 font-sans">
           <Typewrite />
-        </p>
+        </div>
         <div className="flex">
           <button
             type="button"

@@ -7,8 +7,8 @@ const InfinityScroll = ({ ariaVal }: { ariaVal: boolean }) => {
       aria-hidden={ariaVal}
     >
       {Other_skils.map((elem, index) => (
-        <>
-          <li key={index}>
+        <div key={index}>
+          <li>
             <elem.Icon
               title={elem.Title}
               size={40}
@@ -19,7 +19,7 @@ const InfinityScroll = ({ ariaVal }: { ariaVal: boolean }) => {
           <li className="text-sm font-mono font-light text-clip text-white">
             {elem.Title}
           </li>
-        </>
+        </div>
       ))}
     </ul>
   );

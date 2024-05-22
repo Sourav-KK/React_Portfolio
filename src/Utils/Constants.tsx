@@ -19,7 +19,7 @@ import {
 } from "../Utils/React-icons";
 
 const AnchorStyle: string =
-  "text-white hover:bg-indigo-800 rounded-full px-5 py-2 text-xl transition-colors delay-800 ease-in ";
+  "text-white hover:bg-sky-400 rounded-full px-5 py-2 text-xl transition-colors delay-800 ease-in ";
 
 const Other_skils = [
   { Icon: TiHtml5, Title: "HTML5" },

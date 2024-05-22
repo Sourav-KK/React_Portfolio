@@ -1,4 +1,4 @@
-import { FaNpm, FaBootstrap, FaGithub, FaAnglesRight } from "react-icons/fa6";
+import { FaNpm,FaPlus, FaBootstrap, FaGithub, FaAnglesRight } from "react-icons/fa6";
 import { BiLogoPostgresql } from "react-icons/bi";
 import { CiCircleChevDown, CiCircleChevUp } from "react-icons/ci";
 import { RiTailwindCssFill } from "react-icons/ri";
@@ -54,6 +54,7 @@ export {
   SiVite,
   SiReactrouter,
   SiDaisyui,
+  FaPlus,
   CiCircleChevDown,
   CiCircleChevUp,
 };

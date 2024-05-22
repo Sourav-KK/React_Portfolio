@@ -27,15 +27,13 @@ const Real_Skills = () => {
       </div>
       <div className="flex justify-evenly flex-wrap">
         {skillsIcon.map((skill, index) => (
-          <>
-            <div
-              key={index}
-              className="flex justify-center hover:scale-105 flex-col items-center bg-sky-900 p-6 rounded-lg"
-            >
-              <skill.Icon title={skill.Title} size={40} color="#eeeee4" />
-              <p className="font-mono text-white">{skill.Title}</p>
-            </div>
-          </>
+          <div
+            key={index}
+            className="flex justify-center hover:scale-105 flex-col items-center bg-sky-900 p-6 rounded-lg"
+          >
+            <skill.Icon title={skill.Title} size={40} color="#eeeee4" />
+            <p className="font-mono text-white">{skill.Title}</p>
+          </div>
         ))}
       </div>
 

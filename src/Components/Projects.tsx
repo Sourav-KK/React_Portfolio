@@ -86,7 +86,10 @@ const Projects = () => {
 
       <div className="grid md:grid-cols-3 grid-cols-1 p-5 pl-20 pr-20 pb-20 gap-7 ">
         {projectDetails.map((work, index) => (
-          <div className="grid grid-rows-2 p-4 h-auto rounded-lg bg-gray-50 shadow-2xl border-b-2 border-sky-800">
+          <div
+            className="grid grid-rows-2 p-4 h-auto rounded-lg bg-gray-50 shadow-2xl border-b-2 border-sky-800"
+            key={index}
+          >
             {work.state ? (
               <div
                 key={index}
