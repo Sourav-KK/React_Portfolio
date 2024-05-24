@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import { FaAnglesRight } from "../Utils/React-icons";
 
 const Cards = () => {
   const [projectDetails, setProjectDetails] = useState([
@@ -19,7 +20,7 @@ const Cards = () => {
         "Express.js",
         "MongoDB",
         "Mongoose",
-        "Redux Toolkit",
+        "Redux-Toolkit",
       ],
       state: false,
     },
@@ -46,39 +47,79 @@ const Cards = () => {
       state: false,
     },
   ]);
+
+  const setHoverTrue = (index: number) => {
+    setProjectDetails((prevDetails) =>
+      prevDetails.map((val, i) => (i === index ? { ...val, state: true } : val))
+    );
+  };
+  const setHoverFalse = (index: number) => {
+    setProjectDetails((prevDetails) =>
+      prevDetails.map((val, i) =>
+        i === index ? { ...val, state: false } : val
+      )
+    );
+  };
+
   const redirectWebsite = (link: string) => {
     window.open(link, "_blank");
   };
+
   return (
-    <div className="grid gap-3 justify-around p-10 grid-cols-1 md:grid-cols-3 md:gap-3 ">
+    <div className="grid gap-3 justify-around p-10 grid-cols-1 lg:grid-cols-3 bg-cream-50">
       {projectDetails.map((project, index) => (
-        <div className="card w-5/6 bg-base-100 shadow-xl" key={index}>
-          <figure className="px-10 pt-10">
-            <img
-              src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-              alt="Shoes"
-              className="rounded-xl"
-            />
-          </figure>
-          <div className="card-body items-center text-center">
-            <h2 className="card-title">{project.title}</h2>
-            <p>{project.Description}</p>
-            <div className="card-actions justify-end">
-              {project.techs.map((techno, index) => (
-                <div className="badge badge-outline flex" key={index}>
-                  {techno}
-                </div>
-              ))}
-            </div>
-            <div className="card-actions">
+        <div
+          className="grid grid-cols-1 gap-y-2 rounded-md p-2 bg-white min-h-fit"
+          key={index}
+          onMouseOver={() => setHoverTrue(index)}
+          onMouseOut={() => setHoverFalse(index)}
+        >
+          {project.state ? (
+            <div className="flex justify-center items-center ">
               <button
-                className="btn btn-primary"
-                onClick={() => redirectWebsite("sdkl")}
+                type="button"
+                className="btn rounded-md border-2 border-solid border-white p-2 bg-black text-white hover:scale-105 hover:bg-cream-50  hover:text-stone-800 hover:border-none"
+                onClick={() => redirectWebsite(project.link)}
               >
-                Visit Website
+                Visit website
+                <FaAnglesRight />
               </button>
             </div>
-          </div>
+          ) : (
+            <div>
+              <figure className="p-2 ">
+                <img
+                  src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+                  alt="somthiung"
+                  loading="lazy"
+                  className="rounded-lg"
+                />
+              </figure>
+
+              <div className="flex p-2">
+                <h1 className="text-balance  font-mono text-left text-3xl font-bold text-stone-800 ">
+                  {project.title}
+                </h1>
+              </div>
+
+              <div className="flex p-2 border-t-2 border-black">
+                <p className="font-mono text-stone-800">
+                  {project.Description}
+                </p>
+              </div>
+
+              <div className="flex flex-wrap flex-row items-start justify-start pl-2">
+                {project.techs.map((lang, index) => (
+                  <div
+                    key={index}
+                    className="badge badge-neutral mb-2 mr-2  text-black font-mono border-none bg-cream-100"
+                  >
+                    {lang}
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       ))}
     </div>

@@ -7,7 +7,6 @@ import Real_Skills from "./Components/Real_Skills";
 import About from "./Components/About";
 // import Contact from "./Components/Contact";
 import Collapse from "./Components/Collapse";
-import Cards from "./Components/Cards";
 
 function App() {
   return (
@@ -22,9 +21,9 @@ function App() {
       <Real_Skills />
       <Projects />
       {/* <Contact /> */}
-      <Collapse/>
+      <Collapse />
       <Testimonial />
-      <Cards/>
+
       <Footer />
     </div>
   );

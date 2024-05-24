@@ -1,7 +1,7 @@
 import { AiOutlineClose } from "react-icons/ai";
 import { HiMenuAlt1 } from "react-icons/hi";
 import { useState } from "react";
-import Logo from "../assets/removeBG.png";
+import Logo from "../assets/new_logo.png";
 import AnchorTag from "../Utils/AnchorTag";
 import { AnchorStyle } from "../Utils/Constants";
 
