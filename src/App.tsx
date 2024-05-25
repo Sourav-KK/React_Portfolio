@@ -1,12 +1,12 @@
 import Hero from "./Components/Hero";
 import Nav from "./Components/Nav";
-import Testimonial from "./Components/Testimonial";
+import Testimonial from "./Components/Testimonials/Testimonial";
 import Footer from "./Components/Footer";
 import Projects from "./Components/Projects";
 import Real_Skills from "./Components/Real_Skills";
 import About from "./Components/About";
 // import Contact from "./Components/Contact";
-import Collapse from "./Components/Collapse";
+import Accordion from "./Components/Accordion";
 
 function App() {
   return (
@@ -20,9 +20,8 @@ function App() {
 
       <Real_Skills />
       <Projects />
-      {/* <Contact /> */}
-      <Collapse />
       <Testimonial />
+      <Accordion />
 
       <Footer />
     </div>

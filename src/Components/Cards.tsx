@@ -1,52 +1,18 @@
 import { useState } from "react";
 import { FaAnglesRight } from "../Utils/React-icons";
+import { ProjectArr } from "../Utils/Constants";
+
+interface ProjectArrI {
+  title: string;
+  link: string;
+  Description: string;
+  techs: string[];
+  state: boolean;
+}
 
 const Cards = () => {
-  const [projectDetails, setProjectDetails] = useState([
-    {
-      title: "URL Shortner",
-      link: "sdsd",
-      Description: "A backend work to shorten lenghty URLs",
-      techs: ["Node.js", "Express.js", "MongoDB", "Mongoose"],
-      state: false,
-    },
-    {
-      title: "User Management",
-      link: "sdsd",
-      Description: "A interface to mointer & track users and their roles.",
-      techs: [
-        "Node.js",
-        "React",
-        "Express.js",
-        "MongoDB",
-        "Mongoose",
-        "Redux-Toolkit",
-      ],
-      state: false,
-    },
-    {
-      title: "Netflix Clone",
-      link: "sdsd",
-      Description:
-        "A clone of the Netflix website using React by integrating API's",
-      techs: ["React", "Hooks", "APIs"],
-      state: false,
-    },
-    {
-      title: "Volta Ecommerce",
-      link: "sdsd",
-      Description: "Ecommerce website using Node.js",
-      techs: ["Node.js", "MongoDB", "Mongoose", "EJS", "Express.js"],
-      state: false,
-    },
-    {
-      title: "Todo",
-      link: "sdsd",
-      Description: "A simple Todo webapp using React",
-      techs: ["React", "Hooks", "APIs"],
-      state: false,
-    },
-  ]);
+  const [projectDetails, setProjectDetails] =
+    useState<ProjectArrI[]>(ProjectArr);
 
   const setHoverTrue = (index: number) => {
     setProjectDetails((prevDetails) =>
@@ -73,6 +39,7 @@ const Cards = () => {
           key={index}
           onMouseOver={() => setHoverTrue(index)}
           onMouseOut={() => setHoverFalse(index)}
+          onClick={() => redirectWebsite(project.link)}
         >
           {project.state ? (
             <div className="flex justify-center items-center ">

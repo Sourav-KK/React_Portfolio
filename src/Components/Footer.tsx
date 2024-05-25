@@ -1,9 +1,11 @@
 import { Linkedin } from "lucide-react";
 import { FaGithub } from "react-icons/fa6";
+import Spin from "./Loaders/Spin";
 
 const Footer = () => {
   return (
     <div className="grid justify-center gap-y-4 bg-neutral-900 text-white py-7">
+      <Spin />
       <div className="flex justify-evenly">
         <a href="#">
           <FaGithub size={25} />
