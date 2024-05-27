@@ -1,4 +1,3 @@
-
 const Avatar = ({ img, altText }: { img: string; altText: string }) => {
   return (
     <div className="avatar w-full flex justify-center items-center p-3">

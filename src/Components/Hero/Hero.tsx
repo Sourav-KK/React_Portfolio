@@ -6,8 +6,8 @@ import Spin from "@utils/Loaders/Spin";
 const Hero = () => {
   return (
     <section className="flex justify-around items-center p-7 space-x-10 lg:flex-row ssm:flex-col ssm:space-y-10 text-white">
-      <div className="lg:w-1/3 ssm:w-fit grid gap-y-2 ">
-        <p className="text-xl  text-slate-300 font-mono text-center md:text-left">
+      <div className="lg:w-1/3 ssm:w-fit grid gap-y-6 ">
+        <p className="text-xl text-slate-50 font-mono text-center md:text-left">
           Hi, my name is
         </p>
         <h1 className="text-4xl uppercase font-mono text-center md:text-left">

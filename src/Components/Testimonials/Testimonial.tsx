@@ -73,7 +73,7 @@ const Sample = () => {
           <SwiperSlide className="p-20 ">
             <div
               key={index}
-              className="grid grid-cols-1 place-content-center p-12 w-[50%] border-2 rounded-md border-indigo-900"
+              className="grid grid-cols-1 place-content-center p-12 w-[80%] border-2 rounded-md border-indigo-900"
             >
               <Suspense
                 key={index}
@@ -85,8 +85,8 @@ const Sample = () => {
               >
                 <Avatar key={index} altText={item.author} img={item.img} />
               </Suspense>
-              <div className="grid grid-cols-1 gap-y-2">
-                <p className="font-mono text-xl md:text-2xl text-stone-700">
+              <div className="grid grid-cols-1 gap-y-2 w-auto">
+                <p className="font-mono text-sm md:text-2xl text-stone-700 text-pretty">
                   " {item.quote} "
                 </p>
                 <p className="font-mono uppercase font-bold text-xl md:text-2xl text-stone-900">

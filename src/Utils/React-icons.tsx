@@ -1,4 +1,4 @@
-import { BiLogoPostgresql } from "react-icons/bi";
+import { BiLogoPostgresql, BiSolidUpArrowSquare } from "react-icons/bi";
 import { CiCircleChevDown, CiCircleChevUp } from "react-icons/ci";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { TiHtml5 } from "react-icons/ti";
@@ -6,7 +6,6 @@ import { FaNode, FaGitAlt } from "react-icons/fa";
 import { TbRestore } from "react-icons/tb";
 import { AiOutlineClose } from "react-icons/ai";
 import { HiMenuAlt1 } from "react-icons/hi";
-
 import {
   FaNpm,
   FaPlus,
@@ -74,4 +73,5 @@ export {
   FaCircleChevronLeft,
   AiOutlineClose,
   HiMenuAlt1,
+  BiSolidUpArrowSquare,
 };

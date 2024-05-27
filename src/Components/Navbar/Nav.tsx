@@ -55,14 +55,14 @@ const Nav = () => {
       <div className="ssm:block lg:hidden">
         {toggle && (
           <div className="flex justify-between ml-10 pt-4 border-t-2 border-b-2 w-[80%] p-2">
-            <ul>
-              <li className="text-white hover:text-stone-600 text-xl mb-2 cursor-pointer">
+            <ul className="w-full">
+              <li className="text-white  hover:text-stone-600 text-xl mb-2 cursor-pointer hover:bg-slate-100 hover:bg-opacity-25 hover:rounded-md pl-2 transition duration-700 w-full">
                 Home
               </li>
-              <li className="text-white hover:text-stone-600 text-xl mb-2 cursor-pointer">
+              <li className="text-white hover:text-stone-600 text-xl mb-2 cursor-pointer hover:bg-slate-100 hover:bg-opacity-25 hover:rounded-md pl-2 transition duration-700 w-full">
                 About
               </li>
-              <li className="text-white hover:text-stone-600 text-xl mb-2 cursor-pointer">
+              <li className="text-white hover:text-stone-600 text-xl mb-2 cursor-pointer hover:bg-slate-100 hover:bg-opacity-25 hover:rounded-md pl-2 transition duration-700 w-full">
                 Skills
               </li>
             </ul>
