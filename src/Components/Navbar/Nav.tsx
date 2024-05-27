@@ -1,9 +1,9 @@
-import { AiOutlineClose } from "react-icons/ai";
-import { HiMenuAlt1 } from "react-icons/hi";
+// import { AiOutlineClose, HiMenuAlt1 } from "@utils/React-icons";
 import { useState } from "react";
-import Logo from "../assets/new_logo.png";
-import AnchorTag from "../Utils/AnchorTag";
-import { AnchorStyle } from "../Utils/Constants";
+import Logo from "../../assets/new_logo.png";
+import AnchorTag from "@utils/AnchorTag";
+import { AnchorStyle } from "@utils/Constants";
+import Svg_Com from "./Svg";
 
 const Nav = () => {
   const [toggle, setToggle] = useState<boolean>(false);
@@ -40,17 +40,13 @@ const Nav = () => {
           </div>
           <div className="ssm:block lg:hidden">
             {toggle ? (
-              <AiOutlineClose
-                size={30}
-                className="text-white cursor-pointer"
-                onClick={closeMenu}
-              />
+              <>
+                <Svg_Com action={closeMenu} />
+              </>
             ) : (
-              <HiMenuAlt1
-                size={30}
-                className="text-white cursor-pointer"
-                onClick={openMenu}
-              />
+              <>
+                <Svg_Com action={openMenu} />
+              </>
             )}
           </div>
         </div>
@@ -58,15 +54,15 @@ const Nav = () => {
 
       <div className="ssm:block lg:hidden">
         {toggle && (
-          <div className="flex justify-between ml-10">
+          <div className="flex justify-between ml-10 pt-4 border-t-2 border-b-2 w-[80%] p-2">
             <ul>
-              <li className="text-white hover:bg-indigo-800 text-xl mb-2 cursor-pointer">
+              <li className="text-white hover:text-stone-600 text-xl mb-2 cursor-pointer">
                 Home
               </li>
-              <li className="text-white hover:bg-indigo-800 text-xl mb-2 cursor-pointer">
+              <li className="text-white hover:text-stone-600 text-xl mb-2 cursor-pointer">
                 About
               </li>
-              <li className="text-white hover:bg-indigo-800 text-xl mb-2 cursor-pointer">
+              <li className="text-white hover:text-stone-600 text-xl mb-2 cursor-pointer">
                 Skills
               </li>
             </ul>

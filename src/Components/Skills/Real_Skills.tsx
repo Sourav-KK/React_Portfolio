@@ -6,7 +6,7 @@ import {
   IoLogoJavascript,
   SiTypescript,
   BiLogoPostgresql,
-} from "../Utils/React-icons";
+} from "../../Utils/React-icons";
 import Skill_Scroll from "./Skill_Scroll";
 const Real_Skills = () => {
   const skillsIcon = [

@@ -1,12 +1,11 @@
-import Hero from "./Components/Hero";
-import Nav from "./Components/Nav";
-import Testimonial from "./Components/Testimonials/Testimonial";
-import Footer from "./Components/Footer";
-import Projects from "./Components/Projects";
-import Real_Skills from "./Components/Real_Skills";
-import About from "./Components/About";
-// import Contact from "./Components/Contact";
-import Accordion from "./Components/Accordion";
+import Hero from "@components/Hero/Hero";
+import Nav from "@components/Navbar/Nav";
+import Footer from "@components/Footer";
+import Projects from "@components/Projects";
+import Real_Skills from "@components/Skills/Real_Skills";
+import About from "@components/About";
+import Contact_form from "@components/Contact_Form/Contact_form";
+import Testimonial from "@components/Testimonials/Testimonial";
 
 function App() {
   return (
@@ -16,13 +15,11 @@ function App() {
         <Hero />
       </div>
       <About />
-      {/* <Skills /> */}
 
       <Real_Skills />
-      <Projects />
       <Testimonial />
-      <Accordion />
-
+      <Projects />
+      <Contact_form />
       <Footer />
     </div>
   );

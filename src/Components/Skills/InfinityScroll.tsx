@@ -1,4 +1,4 @@
-import { Other_skils } from "./Constants";
+import { Other_skils } from "@utils/Constants";
 
 const InfinityScroll = ({ ariaVal }: { ariaVal: boolean }) => {
   return (

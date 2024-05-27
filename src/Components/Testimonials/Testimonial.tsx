@@ -1,7 +1,18 @@
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
+import "../../Style/testimonial_style.css";
+
+// import required modules
+import { Keyboard, Pagination, Navigation, EffectFade } from "swiper/modules";
 import { lazy, Suspense } from "react";
-import Spin from "../Loaders/Spin";
-// import Testimonial_carousal from "./Testimonial_carousal";
-const Testimonial_carousal = lazy(() => import("./Testimonial_carousal"));
+import Spin from "@utils/Loaders/Spin";
+
+const Avatar = lazy(() => import("@components/Testimonials/Avatar"));
 
 interface testimonialsI {
   img: string;
@@ -10,13 +21,13 @@ interface testimonialsI {
   postion: string;
   item_no: string;
 }
-const Testimonial = () => {
+const Sample = () => {
   const testimonials: testimonialsI[] = [
     {
       img: "https://avatar.iran.liara.run/public/38",
       quote:
         " Lorem ipsum dolor sit amet consectetur adipisicing elit.tenetur odio fugit ea impedit ",
-      author: "_John Doe",
+      author: "-John Doe",
       postion: "Lorem ipsum, font-mono, font-mono",
       item_no: "item1",
     },
@@ -39,42 +50,58 @@ const Testimonial = () => {
   ];
 
   return (
-    <div className="grid grid-cols-1 pt-20 gap-y-2 ">
-      <div className="flex justify-center">
-        <h1 className="font-mono  uppercase text-stone-900 font-bold text-3xl text-center">
+    <>
+      <div className="flex justify-center pt-10">
+        <h1 className="font-mono uppercase text-stone-800 font-bold text-3xl text-center">
           Things people say
         </h1>
       </div>
-      {/* carousals */}
-      <div className="carousel w-full transition-all ease-linear duration-1000">
-        <Suspense fallback={<Spin />}>
-          {testimonials.map((task, index) => (
-            <Testimonial_carousal
+      <Swiper
+        slidesPerView={1}
+        spaceBetween={30}
+        keyboard={{
+          enabled: true,
+        }}
+        pagination={{
+          clickable: true,
+        }}
+        navigation={true}
+        modules={[Keyboard, Pagination, Navigation, EffectFade]}
+        className="mySwiper"
+      >
+        {testimonials.map((item, index) => (
+          <SwiperSlide className="p-20 ">
+            <div
               key={index}
-              author={task.author}
-              img={task.img}
-              quote={task.quote}
-              postion={task.postion}
-              item_no={task.item_no}
-            />
-          ))}
-        </Suspense>
-      </div>
-
-      {/* buttons */}
-      <div className="flex justify-center w-full py-2 gap-2">
-        <a href="#item1" className="btn btn-xs active">
-          1
-        </a>
-        <a href="#item2" className="btn btn-xs">
-          2
-        </a>
-        <a href="#item3" className="btn btn-xs">
-          3
-        </a>
-      </div>
-    </div>
+              className="grid grid-cols-1 place-content-center p-12 w-[50%] border-2 rounded-md border-indigo-900"
+            >
+              <Suspense
+                key={index}
+                fallback={
+                  <div className="avatar w-full flex justify-center items-center p-3">
+                    <Spin key={index} />
+                  </div>
+                }
+              >
+                <Avatar key={index} altText={item.author} img={item.img} />
+              </Suspense>
+              <div className="grid grid-cols-1 gap-y-2">
+                <p className="font-mono text-xl md:text-2xl text-stone-700">
+                  " {item.quote} "
+                </p>
+                <p className="font-mono uppercase font-bold text-xl md:text-2xl text-stone-900">
+                  {item.author}
+                </p>
+                <p className="font-mono text-sm text-stone-800">
+                  {item.postion}{" "}
+                </p>
+              </div>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </>
   );
 };
 
-export default Testimonial;
+export default Sample;

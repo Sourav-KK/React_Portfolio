@@ -1,5 +1,4 @@
-import InfinityScroll from "../Utils/InfinityScroll";
-
+import InfinityScroll from "./InfinityScroll";
 const Skill_Scroll = () => {
   return (
     <div
