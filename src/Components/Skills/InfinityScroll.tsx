@@ -13,10 +13,10 @@ const InfinityScroll = ({ ariaVal }: { ariaVal: boolean }) => {
               title={elem.Title}
               size={40}
               color="#eeeee4"
-              className={`hover:scale-105`}
+              className={`hover:scale-105 flex justify-center items-center`}
             />
           </li>
-          <li className="text-sm font-mono font-light text-clip text-white">
+          <li className="text-sm font-mono font-light text-clip text-white text-center">
             {elem.Title}
           </li>
         </div>

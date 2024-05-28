@@ -1,3 +1,4 @@
+import { lazy, Suspense } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -5,11 +6,10 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-import "../../Style/testimonial_style.css";
+import "@styles/testimonial_style.css";
 
 // import required modules
 import { Keyboard, Pagination, Navigation, EffectFade } from "swiper/modules";
-import { lazy, Suspense } from "react";
 import Spin from "@utils/Loaders/Spin";
 
 const Avatar = lazy(() => import("@components/Testimonials/Avatar"));
@@ -21,7 +21,7 @@ interface testimonialsI {
   postion: string;
   item_no: string;
 }
-const Sample = () => {
+const Testimonial = () => {
   const testimonials: testimonialsI[] = [
     {
       img: "https://avatar.iran.liara.run/public/38",
@@ -70,7 +70,7 @@ const Sample = () => {
         className="mySwiper"
       >
         {testimonials.map((item, index) => (
-          <SwiperSlide className="p-20 ">
+          <SwiperSlide className="p-20 " key={index}>
             <div
               key={index}
               className="grid grid-cols-1 place-content-center p-12 w-[80%] border-2 rounded-md border-indigo-900"
@@ -104,4 +104,4 @@ const Sample = () => {
   );
 };
 
-export default Sample;
+export default Testimonial;

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { FaAngleUp } from "react-icons/fa";
+import { FaAngleUp } from "@utils/React-icons";
 
 import "@styles/GoToTop.css";
 

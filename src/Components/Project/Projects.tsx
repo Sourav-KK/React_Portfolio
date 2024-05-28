@@ -5,7 +5,7 @@ const Projects = () => {
     window.open("lin", "_blank");
   };
   return (
-    <div className="bg-cream-50 rounded-md  max-w-full">
+    <div className="bg-cream-50 rounded-md  max-w-full" id="projectSection">
       <div className="grid justify-items-center  gap-y-2">
         <h1 className="text-4xl text-stone-800 mt-10 uppercase p-3 font-mono font-bold">
           Projects

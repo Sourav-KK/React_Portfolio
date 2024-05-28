@@ -7,9 +7,14 @@ const AnchorTag = ({
   style: string;
   title: string;
 }) => {
+  const handleClick = (id: string) => {
+    const elementID = document.querySelector(id);
+
+    elementID?.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <>
-      <a href={link} className={style}>
+      <a onClick={() => handleClick(link)} className={style}>
         {title}
       </a>
     </>

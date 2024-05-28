@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { FaAnglesRight } from "../Utils/React-icons";
-import { ProjectArr } from "../Utils/Constants";
+import { FaAnglesRight } from "@utils/React-icons";
+import { ProjectArr } from "@utils/Constants";
 
 interface ProjectArrI {
   title: string;

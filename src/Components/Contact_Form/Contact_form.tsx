@@ -17,7 +17,7 @@ const Contact_form = () => {
   };
 
   return (
-    <div className="flex p-20">
+    <div className="flex p-20" id="contactSection">
       <div className="collapse bg-base-200 collapse-plus">
         <input type="checkbox" className="peer" />
         <div className="collapse-title uppercase font-bold font-mono text-4xl text-center bg-slate-200  peer-checked:bg-slate-100 peer-checked:text-stone-800 text-stone-800">

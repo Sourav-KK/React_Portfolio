@@ -13,7 +13,7 @@ const Hero = () => {
         <h1 className="text-4xl uppercase font-mono text-center md:text-left">
           Sourav{" "}
         </h1>
-        <div className=" text-xl text-slate-300 font-sans ">
+        <div className=" text-xl text-slate-50 font-sans ">
           <Typewrite />
         </div>
         <div className="flex justify-center align-middle md:justify-start">

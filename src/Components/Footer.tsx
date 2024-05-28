@@ -1,5 +1,4 @@
-import { Linkedin } from "lucide-react";
-import { FaGithub } from "react-icons/fa6";
+import { FaLinkedinIn, FaGithub } from "@utils/React-icons";
 
 const Footer = () => {
   return (
@@ -10,7 +9,7 @@ const Footer = () => {
         </a>
 
         <a href="#">
-          <Linkedin size={25} />
+          <FaLinkedinIn size={25} />
         </a>
       </div>
       <h5 className="text-xs font-light">© Copyright 2024 - soup_loop</h5>
