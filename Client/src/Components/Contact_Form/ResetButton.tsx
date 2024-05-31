@@ -1,11 +1,11 @@
-import { TbRestore } from "../../Utils/React-icons";
+import { TbRestore } from "@utils/React-icons";
 
-const ResetButton = ({ handleReset }: { handleReset: () => void }) => {
+const ResetButton = (action: () => void) => {
   return (
     <div className="grid place-content-end">
       <button
+        onClick={action}
         type="button"
-        onClick={handleReset}
         className=" btn btn-sm rounded-badge border-2 p-2"
         title="Reset form"
       >

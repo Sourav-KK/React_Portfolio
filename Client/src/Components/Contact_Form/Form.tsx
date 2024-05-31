@@ -1,212 +1,105 @@
-import Submit_btn from "./Submit_btn";
-import { useFormik } from "formik";
-import { validateee, initialVal } from "./Form_Validation";
-// import { useState } from "react";
-import ResetButton from "./ResetButton";
+// import ResetButton from "@components/Contact_Form/ResetButton";
+import React, { useState } from "react";
+import Submit_btn from "@components/Contact_Form/Submit_btn";
+import { formDataI } from "@utils/interfaces";
+// import ResetButton from "./ResetButton";
+import Inputs from "./Inputs";
+import Subject_comp from "./Subject";
+import Message_comp from "./Message_comp";
+import {
+  initialVal,
+  validateee,
+} from "@components/Contact_Form/Form_Validation";
 
 const Form = () => {
-  // const [submiting, setSubmiting] = useState<boolean>(false);
+  const [submiting, setSubmiting] = useState<boolean>(false);
+  const [formValues, setFormValues] = useState<formDataI>(initialVal);
+  const [validationerror, setValidationError] = useState<formDataI>(initialVal);
 
-  const formik = useFormik({
-    initialValues: initialVal,
-    validate: validateee,
-
-    onSubmit: async (values, formikHelpers) => {
-      console.log("values in onSubmit:", values);
-      console.log("formikHelpers in onSubmit:", formikHelpers);
-      // try {
-      //   setSubmiting(true);
-
-      //   const formData = JSON.stringify(values, null, 2);
-      //   console.log("formData:", formData);
-
-      //   resetForm();
-      // } catch (error) {
-      //   console.log("Error occured", error);
-      //   setSubmiting(false);
-      // } finally {
-      //   console.log("finally occured");
-      //   setSubmiting(false);
-      // }
-    },
-  });
-
-  // const handleSubmit = async (values: formDataI) => {
-  //   console.log("in validate");
-  //   try {
-  //     setSubmiting(true);
-
-  //     const formData = JSON.stringify(values);
-  //     console.log("formData:", formData);
-  //     const response = await fetch("https://localhost:3001/contact-form", {
-  //       method: "POST",
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //       },
-  //       body: formData,
-  //     });
-  //     console.log("response:", response);
-
-  //     if (response.ok) {
-  //       console.log("Form submitted successfully");
-  //       // Handle successful submission here
-  //     } else {
-  //       console.error("Form submission failed");
-  //       // Handle errors here
-  //     }
-  //   } catch (error) {
-  //     console.error("error:", error);
-  //   } finally {
-  //     setSubmiting(false);
-  //   }
-  // };
-
-  const handleReset = () => {
-    formik.resetForm();
+  const handleBlur = async () => {
+    console.log("handleBlur");
+    const err = await validateee(formValues);
+    setValidationError(err);
   };
 
+  const handleChange = (
+    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    console.log("inside handleChange");
+    const { name, value } = event.target;
+    setFormValues((prevState) => ({ ...prevState, [name]: value }));
+  };
+
+  // const handleReset = () => {
+  //   setFormValues(initialVal);
+  // };
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    try {
+      setSubmiting(true);
+      console.log("inside handlesubmit");
+      console.log("formValues:", formValues);
+    } catch (error) {
+      console.error("error in submting:", error);
+      setSubmiting(false);
+    } finally {
+      setSubmiting(false);
+    }
+    event.preventDefault();
+  };
   return (
     <>
-      <form
-        className="grid grid-cols-1 p-4 gap-y-2"
-        onSubmit={formik.handleSubmit}
-      >
+      <form className="grid grid-cols-1 p-4 gap-y-2" onSubmit={handleSubmit}>
         {/* first_name + last_name */}
-        <div className="flex justify-between w-full p-2 gap-2 md:flex-row flex-col">
-          <div className="grid grid-cols-1 w-full md:w-6/12 ">
-            <div className="">
-              {formik.touched.first_name && formik.errors.first_name && (
-                <p className="text-red-500 font-mono font-semibold pl-2 pb-2">
-                  {formik.errors.first_name}
-                </p>
-              )}
-            </div>
-
-            <input
-              type="text"
-              id="first_name"
-              onChange={formik.handleChange}
-              placeholder="First Name *"
-              onBlur={formik.handleBlur}
-              value={formik.values.first_name}
-              className="bg-white border-2 border-stone-400 rounded-md p-2 w-full"
-              // {...formik.getFieldProps("first_name")}
-            />
-          </div>
-          <div className="grid grid-cols-1 w-full md:w-6/12 ">
-            <div className="">
-              {formik.touched.last_name && formik.errors.last_name && (
-                <p className="text-red-500 font-mono font-semibold pl-2 pb-2">
-                  {formik.errors.last_name}
-                </p>
-              )}
-            </div>
-            <input
-              type="text"
-              id="last_name"
-              onChange={formik.handleChange}
-              placeholder="Last Name *"
-              className="bg-white border-2 border-stone-400 rounded-md p-2 w-full"
-              // {...formik.getFieldProps("last_name")}
-              onBlur={formik.handleBlur}
-              value={formik.values.last_name}
-            />
-          </div>
-        </div>
+        <Inputs
+          placeHold1="FIRST NAME *"
+          placeHold2="LAST NAME *"
+          fieldName1="first_name"
+          fieldName2="last_name"
+          val1={formValues.first_name}
+          val2={formValues.last_name}
+          type1="text"
+          type2="text"
+          err1={validationerror.first_name}
+          err2={validationerror.last_name}
+          handleBlur={handleBlur}
+          handleChange={handleChange}
+        />
 
         {/* email + phone */}
-        <div className="flex justify-between w-full p-2 gap-2 md:flex-row flex-col ">
-          <div className="grid grid-cols-1 w-full md:w-6/12 ">
-            <div className="">
-              {formik.touched.email && formik.errors.email && (
-                <p className="text-red-500 font-mono font-semibold pl-2 pb-2">
-                  {formik.errors.email}
-                </p>
-              )}
-            </div>
-            <input
-              type="email"
-              id="email"
-              placeholder="Email *"
-              className="bg-white border-2 border-stone-400 rounded-md p-2 w-full "
-              // {...formik.getFieldProps("email")}
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-              value={formik.values.email}
-            />
-          </div>
-          <div className="grid grid-cols-1 w-full md:w-6/12 ">
-            <div className="">
-              {formik.touched.phone_no && formik.errors.phone_no && (
-                <p className="text-red-500 font-mono font-semibold pl-2 pb-2">
-                  {formik.errors.phone_no}
-                </p>
-              )}
-            </div>
-            <input
-              type="tel"
-              id="phone_no"
-              placeholder="PHONE"
-              className="bg-white border-2 border-stone-400 rounded-md p-2 w-full "
-              // {...formik.getFieldProps("phone_no")}
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-              value={formik.values.phone_no}
-            />
-          </div>
-        </div>
+        <Inputs
+          placeHold1="EMAIL *"
+          placeHold2="PHONE NO"
+          fieldName1="email"
+          fieldName2="phone_no"
+          val1={formValues.email}
+          val2={formValues.phone_no}
+          type1="email"
+          type2="tel"
+          err1={validationerror.email}
+          err2={validationerror.phone_no}
+          handleBlur={handleBlur}
+          handleChange={handleChange}
+        />
 
         {/* subject */}
-        <div className="grid grid-cols-1  p-2 w-full">
-          <div className="grid grid-cols-1 w-full  ">
-            <div className="">
-              {formik.touched.subject && formik.errors.subject && (
-                <p className="text-red-500 font-mono font-semibold pl-2 pb-2">
-                  {formik.errors.subject}
-                </p>
-              )}
-            </div>
-          </div>
-          <input
-            type="text"
-            className="bg-white border-2 border-stone-400 rounded-md p-2  w-full "
-            id="subject"
-            placeholder="Subject *"
-            onChange={formik.handleChange}
-            // {...formik.getFieldProps("subject")}
-            onBlur={formik.handleBlur}
-            value={formik.values.subject}
-          />
-        </div>
+        <Subject_comp
+          errName={validationerror.subject}
+          val={formValues.subject}
+          handleBlur={handleBlur}
+          handleChange={handleChange}
+        />
 
         {/* Message */}
-        <div className="grid grid-cols-1 p-2 w-full">
-          <div className="grid grid-cols-1 w-full ">
-            <div className="">
-              {formik.touched.message && formik.errors.message && (
-                <p className="text-red-500 font-mono font-semibold pl-2 pb-2">
-                  {formik.errors.message}
-                </p>
-              )}
-            </div>
-            <textarea
-              id="message"
-              placeholder="MESSAGE *"
-              className="bg-transparent border-2 border-stone-400 rounded-md w-full max-h-36 min-h-36 p-2 "
-              wrap="hard"
-              maxLength={700}
-              minLength={100}
-              // {...formik.getFieldProps("message")}
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-              value={formik.values.message}
-            />
-          </div>
-        </div>
+        <Message_comp
+          errName={validationerror.message}
+          val={formValues.message}
+          handleBlur={handleBlur}
+          handleChange={handleChange}
+        />
+
         <Submit_btn />
       </form>
-
-      <ResetButton handleReset={handleReset} />
+      {/* <ResetButton action={handleReset} /> */}
     </>
   );
 };
