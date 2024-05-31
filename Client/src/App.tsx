@@ -8,6 +8,7 @@ import ScrollToTop from "@components/ScrollTop/ScrollTop";
 import { useEffect, useState } from "react";
 import Preloader from "@components/Preloader/Preloader";
 import Nav_Hero from "@components/Nav_Hero";
+// import Sam_contact from "@utils/sam_contact";
 
 function App() {
   const [loading, setLoading] = useState<boolean>(true);
@@ -16,7 +17,7 @@ function App() {
     setTimeout(() => {
       console.log("TimeOut started");
       setLoading(false);
-    }, 3000);
+    }, 2000);
   }, []);
 
   return (
@@ -29,6 +30,7 @@ function App() {
           <Nav_Hero />
           <About />
           <Skills />
+          {/* <Sam_contact /> */}
           <Testimonial />
           <Projects />
           <Contact_form />

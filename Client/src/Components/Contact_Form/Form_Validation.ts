@@ -1,11 +1,4 @@
-interface formDataI {
-  first_name: string;
-  last_name: string;
-  phone_no: string;
-  email: string;
-  subject: string;
-  message: string;
-}
+import { formDataI } from "@utils/interfaces";
 
 const initialVal: formDataI = {
   first_name: "",
@@ -16,8 +9,8 @@ const initialVal: formDataI = {
   message: "",
 };
 
-const validate = (values: formDataI) => {
-  const errors = {
+const validateee = (values: formDataI) => {
+  const errors: formDataI = {
     first_name: "",
     last_name: "",
     phone_no: "",
@@ -28,7 +21,6 @@ const validate = (values: formDataI) => {
 
   const regXName = /^[A-Za-z]+$/;
   const regXSentence = /^[\w\s,.*@()?'"/%^&!]+$/;
-  const regXPhone = /^(0|[1-9]\d*)$/;
 
   // First name
   if (!values.first_name) {
@@ -89,24 +81,22 @@ const validate = (values: formDataI) => {
   //   phone number
   console.log("phone:", values.phone_no);
   console.log("typew phone:", typeof values.phone_no);
-  if (values.phone_no.length > 10) {
+  if (values.phone_no.length !== 10) {
     errors.phone_no = "Must have 10 digits";
   }
 
-  if (values.phone_no.length < 10) {
-    errors.phone_no = "Must have 10 digits";
-  }
-  if (values.phone_no.match(regXPhone)) {
-    errors.phone_no = "Must contain only numbers";
-  }
+  // if (values.phone_no.match(regXPhone)) {
+  //   errors.phone_no = "Must contain only numbers";
+  // }
   //   Email
   if (!values.email) {
     errors.email = "Required";
   } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
     errors.email = "Invalid email address";
   }
+  console.log("errors in validation:", errors);
 
   return errors;
 };
 
-export { validate, initialVal };
+export { validateee, initialVal };

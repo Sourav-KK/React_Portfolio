@@ -21,6 +21,7 @@
     "typescript": "^5.4.5"
   },
   "dependencies": {
+    "@types/cors": "^2.8.17",
     "@types/validator": "^13.11.10",
     "axios": "^1.7.2",
     "bcrypt": "^5.1.1",

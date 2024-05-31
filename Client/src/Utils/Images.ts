@@ -1,4 +1,4 @@
-import Project from "../assets/project.jpg";
-import Project1 from "../assets/project_1.jpg";
+import Project1 from "@assets/project_1.jpg";
+import default_dp from "@assets/default_user.png";
 
-export { Project, Project1 };
+export { Project1, default_dp };
