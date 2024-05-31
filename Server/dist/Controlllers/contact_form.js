@@ -15,7 +15,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const formValidation_1 = __importDefault(require("./formValidation"));
 const contact_form = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        console.log("body in contact_form:", req.body);
         const response = yield (0, formValidation_1.default)(req.body);
         console.log("response:", response);
         return res.status(200).json({});

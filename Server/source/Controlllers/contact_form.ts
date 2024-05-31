@@ -3,8 +3,6 @@ import formValidation from "./formValidation";
 
 const contact_form = async (req: Request, res: Response) => {
   try {
-    console.log("body in contact_form:", req.body);
-
     const response = await formValidation(req.body);
     console.log("response:", response);
 

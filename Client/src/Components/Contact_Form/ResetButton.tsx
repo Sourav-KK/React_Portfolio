@@ -1,6 +1,6 @@
 import { TbRestore } from "@utils/React-icons";
 
-const ResetButton = (action: () => void) => {
+const ResetButton = ({ action }: { action: () => void }) => {
   return (
     <div className="grid place-content-end">
       <button

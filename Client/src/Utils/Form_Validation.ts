@@ -93,7 +93,7 @@ const validateee = (values: formDataI) => {
   }
 
   //   Message
-  if (values.message.length <1) {
+  if (values.message.length < 1) {
     errors.message = "Required";
     return errors;
   }

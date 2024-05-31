@@ -2,14 +2,11 @@
 import React, { useState } from "react";
 import Submit_btn from "@components/Contact_Form/Submit_btn";
 import { formDataI } from "@utils/interfaces";
-// import ResetButton from "./ResetButton";
+import ResetButton from "./ResetButton";
 import Inputs from "./Inputs";
 import Subject_comp from "./Subject";
 import Message_comp from "./Message_comp";
-import {
-  initialVal,
-  validateee,
-} from "@components/Contact_Form/Form_Validation";
+import { initialVal, validateee } from "@utils/Form_Validation";
 
 const Form = () => {
   const [submiting, setSubmiting] = useState<boolean>(false);
@@ -30,14 +27,31 @@ const Form = () => {
     setFormValues((prevState) => ({ ...prevState, [name]: value }));
   };
 
-  // const handleReset = () => {
-  //   setFormValues(initialVal);
-  // };
+  const handleReset = () => {
+    setFormValues(initialVal);
+    setValidationError(initialVal);
+  };
+
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     try {
+      event.preventDefault();
       setSubmiting(true);
       console.log("inside handlesubmit");
-      console.log("formValues:", formValues);
+      // console.log("formValues:", formValues);
+
+      const data = JSON.stringify(formValues);
+      const URL: string = "http://localhost:3001/contact";
+
+      const response = await fetch(URL, {
+        method: "POST",
+        body: data,
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      console.log("server response:", response);
+      console.log("data:", data);
     } catch (error) {
       console.error("error in submting:", error);
       setSubmiting(false);
@@ -46,6 +60,7 @@ const Form = () => {
     }
     event.preventDefault();
   };
+
   return (
     <>
       <form className="grid grid-cols-1 p-4 gap-y-2" onSubmit={handleSubmit}>
@@ -99,7 +114,7 @@ const Form = () => {
 
         <Submit_btn />
       </form>
-      {/* <ResetButton action={handleReset} /> */}
+      <ResetButton action={handleReset} />
     </>
   );
 };
