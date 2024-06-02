@@ -1,6 +1,6 @@
 import { lazy, Suspense } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import { testimonialsI } from "@utils/interfaces";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
@@ -14,12 +14,6 @@ import Spin from "@utils/Loaders/Spin";
 
 const Avatar = lazy(() => import("@components/Testimonials/Avatar"));
 
-interface testimonialsI {
-  img: string;
-  quote: string;
-  author: string;
-  postion: string;
-}
 const Testimonial = () => {
   const testimonials: testimonialsI[] = [
     {
@@ -63,7 +57,7 @@ const Testimonial = () => {
         }}
         navigation={true}
         modules={[Keyboard, Pagination, Navigation, EffectFade]}
-        className="mySwiper"
+        className="mySwiper hover:cursor-grab"
       >
         {testimonials.map((item, index) => (
           <SwiperSlide className="p-20 " key={index}>

@@ -32,7 +32,7 @@ const Cards = () => {
   };
 
   return (
-    <div className="grid gap-3 justify-around p-10 grid-cols-1 lg:grid-cols-3 bg-cream-50">
+    <div className="grid gap-3 justify-around p-10 grid-cols-1 lg:grid-cols-3 bg-golden-100">
       {projectDetails.map((project, index) => (
         <div
           className="grid grid-cols-1 gap-y-2 rounded-md p-2 bg-white min-h-fit"
@@ -45,7 +45,7 @@ const Cards = () => {
             <div className="flex justify-center items-center ">
               <button
                 type="button"
-                className="btn rounded-md border-2 border-solid border-white p-2 bg-black text-white hover:scale-105 hover:bg-cream-50  hover:text-stone-800 hover:border-none"
+                className="btn rounded-md border-2 border-solid border-white p-2 bg-black text-white hover:scale-105 hover:bg-golden-100  hover:text-stone-800 hover:border-none"
                 onClick={() => redirectWebsite(project.link)}
               >
                 Visit website
@@ -79,7 +79,7 @@ const Cards = () => {
                 {project.techs.map((lang, index) => (
                   <div
                     key={index}
-                    className="badge badge-neutral mb-2 mr-2  text-black font-mono border-none bg-cream-100"
+                    className="badge badge-neutral mb-2 mr-2  text-black font-mono border-none bg-cream-50"
                   >
                     {lang}
                   </div>

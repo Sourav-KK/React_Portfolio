@@ -5,38 +5,41 @@ import About from "@components/About";
 import Contact_form from "@components/Contact_Form/Contact_form";
 import Testimonial from "@components/Testimonials/Testimonial";
 import ScrollToTop from "@components/ScrollTop/ScrollTop";
-import { useEffect, useState } from "react";
-import Preloader from "@components/Preloader/Preloader";
 import Nav_Hero from "@components/Nav_Hero";
+import Sample from "@components/New_Project/Index";
+// import Preloader from "@components/Preloader/Preloader";
+// import { useEffect, useState } from "react";
 
 function App() {
-  const [loading, setLoading] = useState<boolean>(true);
+  // const [loading, setLoading] = useState<boolean>(true);
 
-  useEffect(() => {
-    setTimeout(() => {
-      console.log("TimeOut started");
-      setLoading(false);
-    }, 2000);
-  }, []);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     console.log("TimeOut started");
+  //     setLoading(false);
+  //   }, 2000);
+  // }, []);
 
   return (
     <div className="bg-white">
-      {loading ? (
-        <Preloader />
-      ) : (
-        <>
-          <ScrollToTop />
-          <Nav_Hero />
-          <About />
-          <Skills />
-          <Testimonial />
-          <Projects />
-          <Contact_form />
-          <Footer />
-        </>
-      )}
+      <ScrollToTop />
+      <Nav_Hero />
+      <About />
+      <Skills />
+      <Sample />
+      <Testimonial />
+      <Projects />
+      <Contact_form />
+      <Footer />
     </div>
   );
 }
 
 export default App;
+
+// {loading ? (
+//   <Preloader />
+// ) : (
+//         </>
+//         )}
+//         <>

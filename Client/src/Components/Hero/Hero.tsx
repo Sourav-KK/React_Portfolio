@@ -1,7 +1,7 @@
 import { lazy, Suspense } from "react";
 import Typewrite from "./Typewriter";
-const Pic = lazy(() => import("./Hero_img"));
 import Spin from "@utils/Loaders/Spin";
+const Pic = lazy(() => import("./Hero_img"));
 
 const Hero = () => {
   return (
@@ -26,7 +26,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="w-full flex justify-center items-center ssm:w-fit p-2">
+      <div className="w-full flex justify-center items-center ssm:w-fit p-2 ">
         <Suspense fallback={<Spin />}>
           <Pic />
         </Suspense>

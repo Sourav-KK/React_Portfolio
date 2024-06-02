@@ -6,3 +6,10 @@ export interface formDataI {
   subject: string;
   message: string;
 }
+
+export interface testimonialsI {
+  img: string;
+  quote: string;
+  author: string;
+  postion: string;
+}

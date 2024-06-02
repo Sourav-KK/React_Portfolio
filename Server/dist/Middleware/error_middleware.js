@@ -9,12 +9,19 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const router_middleware = (_req, _res, next) => __awaiter(void 0, void 0, void 0, function* () {
+const error_middleware = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
     try {
+        console.log("request in middleware:", req.headers["content-type"]);
+        if (req.headers["content-type"] !== "application/json") {
+            console.error("header is deifferent");
+            return res.status(400).json({ errMessage: "Bad request" });
+        }
+        console.log("error middleware passed");
         next();
     }
     catch (error) {
         console.error("error in middleware:", error);
+        return res.status(400).json({ errMessage: "Bad request" });
     }
 });
-exports.default = router_middleware;
+exports.default = error_middleware;

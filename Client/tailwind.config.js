@@ -21,6 +21,11 @@ export default {
           150: "#cec5ad",
           200: "#AE944F",
         },
+        golden: {
+          50: "#DFC57B",
+          100: "#EDD796",
+          150: "#F2DDA1",
+        },
       },
       animation: {
         "infinite-scroll": "infinite-scroll 32s linear infinite",

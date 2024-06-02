@@ -37,9 +37,9 @@ const ProjectArr = [
     techs: [
       "Node.js",
       "React",
-      "Express.js",
       "MongoDB",
       "Mongoose",
+      "Express.js",
       "Redux-Toolkit",
     ],
     state: false,

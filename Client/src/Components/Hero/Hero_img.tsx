@@ -2,16 +2,19 @@ import HeroPic from "../../assets/portrait.png";
 
 const Hero_img = () => {
   return (
-    <>
+    <picture>
       <img
-        className="rounded-full w-full border-solid border-2 border-white"
+        className="rounded-full w-full  "
         src={HeroPic}
         alt="sourav"
         width={250}
         height={250}
         loading="lazy"
+        decoding="async"
+        role="presentation"
+        fetchPriority="high"
       />
-    </>
+    </picture>
   );
 };
 
