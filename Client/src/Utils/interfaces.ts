@@ -13,3 +13,10 @@ export interface testimonialsI {
   author: string;
   postion: string;
 }
+
+export interface ProjectArrI {
+  title: string;
+  link: string;
+  Description: string;
+  techs: string[];
+}

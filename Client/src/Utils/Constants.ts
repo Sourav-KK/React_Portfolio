@@ -27,21 +27,14 @@ const ProjectArr = [
     title: "URL Shortner",
     link: "sdsd",
     Description: "A backend work to shorten lenghty URLs",
-    techs: ["Node.js", "Express.js", "MongoDB", "Mongoose"],
+    techs: ["Node.js", "Express.js", "MongoDB"],
     state: false,
   },
   {
     title: "User Management",
     link: "sdsd",
     Description: "A interface to mointer & track users and their roles.",
-    techs: [
-      "Node.js",
-      "React",
-      "MongoDB",
-      "Mongoose",
-      "Express.js",
-      "Redux-Toolkit",
-    ],
+    techs: ["Node.js", "React", "MongoDB", "Express.js", "Redux-Toolkit"],
     state: false,
   },
   {
@@ -87,4 +80,5 @@ const Other_skils = [
   { Icon: SiVite, Title: "Vite" },
   { Icon: SiReactrouter, Title: "React router" },
 ];
+
 export { AnchorStyle, ProjectArr, Other_skils };

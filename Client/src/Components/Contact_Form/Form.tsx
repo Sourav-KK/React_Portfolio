@@ -37,7 +37,6 @@ const Form = () => {
       event.preventDefault();
       setSubmiting(true);
       console.log("inside handlesubmit");
-      // console.log("formValues:", formValues);
 
       const data = JSON.stringify(formValues);
       const URL: string = "http://localhost:3001/contact";

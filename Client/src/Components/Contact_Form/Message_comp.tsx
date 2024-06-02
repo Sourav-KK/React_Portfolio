@@ -24,7 +24,7 @@ const Message_comp = ({
         <textarea
           id="message"
           placeholder="MESSAGE *"
-          className="bg-slate-50 border-2 border-stone-400 rounded-md w-full max-h-36 min-h-36 p-2 "
+          className="bg-white border-2 border-stone-400 rounded-md w-full max-h-36 min-h-36 p-2 "
           wrap="hard"
           maxLength={700}
           minLength={100}

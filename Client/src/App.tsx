@@ -1,12 +1,11 @@
 import Footer from "@components/Footer";
-import Projects from "@components/Project/Projects";
 import Skills from "@components/Skills/Real_Skills";
 import About from "@components/About";
 import Contact_form from "@components/Contact_Form/Contact_form";
 import Testimonial from "@components/Testimonials/Testimonial";
 import ScrollToTop from "@components/ScrollTop/ScrollTop";
 import Nav_Hero from "@components/Nav_Hero";
-import Sample from "@components/New_Project/Index";
+import Projects from "@components/Project/Index";
 // import Preloader from "@components/Preloader/Preloader";
 // import { useEffect, useState } from "react";
 
@@ -26,9 +25,8 @@ function App() {
       <Nav_Hero />
       <About />
       <Skills />
-      <Sample />
-      <Testimonial />
       <Projects />
+      <Testimonial />
       <Contact_form />
       <Footer />
     </div>
