@@ -6,6 +6,10 @@ import Testimonial from "@components/Testimonials/Testimonial";
 import ScrollToTop from "@components/ScrollTop/ScrollTop";
 import Nav_Hero from "@components/Nav_Hero";
 import Projects from "@components/Project/Index";
+// import { ErrorBoundary } from "react-error-boundary";
+// import Fallback from "@components/Fallback_UI/Fallback";
+import ErrorBoundary from "@components/Fallback_UI/Classs";
+
 // import Preloader from "@components/Preloader/Preloader";
 // import { useEffect, useState } from "react";
 
@@ -21,14 +25,17 @@ function App() {
 
   return (
     <div className="bg-white">
-      <ScrollToTop />
-      <Nav_Hero />
-      <About />
-      <Skills />
-      <Projects />
-      <Testimonial />
-      <Contact_form />
-      <Footer />
+      <ErrorBoundary>
+        <ScrollToTop />
+        <Nav_Hero />
+        <About />
+        z``
+        <Skills />
+        <Projects />
+        <Testimonial />
+        <Contact_form />
+        <Footer />
+      </ErrorBoundary>
     </div>
   );
 }

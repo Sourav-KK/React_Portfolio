@@ -6,6 +6,7 @@ import helmet from "helmet";
 import Router from "./Routes/Route";
 import cors from "cors";
 import error_middleware from "./Middleware/error_middleware";
+import Port_Error from "./Middleware/Port_error";
 
 const app: Express = express();
 app.use(morgan("tiny"));
@@ -32,7 +33,14 @@ app.use(
   helmet.crossOriginResourcePolicy({ policy: "cross-origin" })
 );
 
-app.listen(PORT_NO, () => console.info("Server running on port:", PORT_NO));
+app.listen(PORT_NO, () => {
+  try {
+    console.info("Server running on port:", PORT_NO);
+  } catch (error) {
+    console.error("Error in starting the port", error);
+    app.use(Port_Error);
+  }
+});
 
 app.use(error_middleware);
 app.use("/", Router);

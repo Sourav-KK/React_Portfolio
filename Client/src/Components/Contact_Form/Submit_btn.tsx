@@ -3,7 +3,7 @@ const Submit_btn = () => {
     <div className="flex p-4 justify-center align-middle">
       <button
         type="submit"
-        className="btn btn-md md:btn-wide sm:btn-sm md:btn-md lg:btn-lg bg-transparent text-stone-800 hover:text-white "
+        className="btn btn-md md:btn-wide font-mono sm:btn-sm md:btn-md lg:btn-lg bg-transparent text-stone-800 hover:text-white "
       >
         Submit
       </button>

@@ -11,6 +11,7 @@ const helmet_1 = __importDefault(require("helmet"));
 const Route_1 = __importDefault(require("./Routes/Route"));
 const cors_1 = __importDefault(require("cors"));
 const error_middleware_1 = __importDefault(require("./Middleware/error_middleware"));
+const Port_error_1 = __importDefault(require("./Middleware/Port_error"));
 const app = (0, express_1.default)();
 app.use((0, morgan_1.default)("tiny"));
 app.use(express_1.default.json(), express_1.default.urlencoded({ extended: true }));
@@ -26,6 +27,14 @@ app.use(helmet_1.default.contentSecurityPolicy({
     includeSubDomains: true,
     preload: true,
 }), helmet_1.default.xXssProtection(), helmet_1.default.frameguard({ action: "sameorigin" }), helmet_1.default.crossOriginResourcePolicy({ policy: "cross-origin" }));
-app.listen(dotenv_1.PORT_NO, () => console.info("Server running on port:", dotenv_1.PORT_NO));
+app.listen(dotenv_1.PORT_NO, () => {
+    try {
+        console.info("Server running on port:", dotenv_1.PORT_NO);
+    }
+    catch (error) {
+        console.error("Error in starting the port", error);
+        app.use(Port_error_1.default);
+    }
+});
 app.use(error_middleware_1.default);
 app.use("/", Route_1.default);

@@ -3,6 +3,7 @@ import contact_form from "../Controlllers/contact_form";
 
 const router = Router();
 
-router.post("/contact", contact_form);
+router.get("/");
+router.route("/contact").post(contact_form);
 
 export default router;

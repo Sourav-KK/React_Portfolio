@@ -47,6 +47,7 @@ const Testimonial = () => {
         </h1>
       </div>
       <Swiper
+        autoplay
         slidesPerView={1}
         spaceBetween={30}
         keyboard={{
