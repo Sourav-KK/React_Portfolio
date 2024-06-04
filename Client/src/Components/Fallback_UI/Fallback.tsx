@@ -1,5 +1,3 @@
-import {} from "react-error-boundary";
-
 const Fallback = () => {
   return (
     <div className="h-full w-full p-48">

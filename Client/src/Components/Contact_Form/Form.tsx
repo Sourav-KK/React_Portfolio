@@ -4,7 +4,7 @@ import Submit_btn from "@components/Contact_Form/Submit_btn";
 import { formDataI } from "@utils/interfaces";
 import ResetButton from "./ResetButton";
 import Inputs from "./Inputs";
-import Subject_comp from "./Subject";
+// import Subject_comp from "./Subject";
 import Message_comp from "./Message_comp";
 import { initialVal, validateee } from "@utils/Form_Validation";
 
@@ -22,7 +22,6 @@ const Form = () => {
   const handleChange = (
     event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    console.log("inside handleChange");
     const { name, value } = event.target;
     setFormValues((prevState) => ({ ...prevState, [name]: value }));
   };
@@ -39,6 +38,7 @@ const Form = () => {
       console.log("inside handlesubmit");
 
       const data = JSON.stringify(formValues);
+      console.log("data:", data);
       const URL: string = "http://localhost:3001/contact";
 
       const response = await fetch(URL, {
@@ -50,7 +50,6 @@ const Form = () => {
       });
 
       console.log("server response:", response);
-      console.log("data:", data);
     } catch (error) {
       console.error("error in submting:", error);
       setSubmiting(false);
@@ -96,12 +95,12 @@ const Form = () => {
         />
 
         {/* subject */}
-        <Subject_comp
+        {/* <Subject_comp
           errName={validationerror.subject}
           val={formValues.subject}
           handleBlur={handleBlur}
           handleChange={handleChange}
-        />
+        /> */}
 
         {/* Message */}
         <Message_comp

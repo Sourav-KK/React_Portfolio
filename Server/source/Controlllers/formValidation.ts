@@ -16,9 +16,8 @@ const formValidation = async (data: formDataI) => {
         }
       | false = await Is_empty(data, isEmpty, errMessage, statusCode);
 
-      if (validation) {
-            
-      }
+    if (validation) {
+    }
   } catch (error) {
     console.error("eror in form validation:", error);
   }

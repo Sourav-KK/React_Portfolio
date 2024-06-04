@@ -12,7 +12,6 @@ const Hero_img = () => {
         loading="lazy"
         decoding="async"
         role="presentation"
-        fetchPriority="high"
       />
     </picture>
   );

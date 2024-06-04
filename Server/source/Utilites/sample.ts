@@ -1,5 +1,5 @@
 import validator from "validator";
-import { formDataI } from "@utility/Interfaces";
+import { formDataI } from "../Utilites/Interfaces";
 
 interface errMessageI {
   field: string;

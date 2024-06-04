@@ -29,7 +29,6 @@ function App() {
         <ScrollToTop />
         <Nav_Hero />
         <About />
-        z``
         <Skills />
         <Projects />
         <Testimonial />

@@ -3,7 +3,7 @@ export interface formDataI {
   last_name: string;
   phone_no: string;
   email: string;
-  subject: string;
+  // subject: string;
   message: string;
 }
 
