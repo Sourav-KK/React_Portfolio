@@ -1,6 +1,8 @@
 ./Client/node_modules
 ./Client/.env
+
 ./Server/node_modules
 ./Server/.env
 
 *.env
+*node_modules
