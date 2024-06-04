@@ -6,17 +6,17 @@ import Router from "./Routes/Route";
 import error_middleware from "./Middleware/error_middleware";
 import Port_Error from "./Middleware/Port_error";
 import { corsOptins, helmetSecurity, limiter } from "./Configurations/server";
+
 const app: Express = express();
 
 app.use(morgan("tiny"));
-app.use(json(), urlencoded({ extended: true }));
-app.use(urlencoded({ extended: true }), json);
+app.use(json, urlencoded({ extended: true }), json);
 app.use(limiter);
 app.use(cookie_parser());
 app.use(corsOptins);
 app.use(helmetSecurity);
 
-app.use(error_middleware);
+// app.use(error_middleware);
 
 app.listen(PORT_NO, () => {
   try {

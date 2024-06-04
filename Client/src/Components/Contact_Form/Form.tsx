@@ -35,7 +35,6 @@ const Form = () => {
     try {
       event.preventDefault();
       setSubmiting(true);
-      console.log("inside handlesubmit");
 
       const data = JSON.stringify(formValues);
       console.log("data:", data);
