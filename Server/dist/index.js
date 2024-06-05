@@ -36,7 +36,7 @@ const Port_error_1 = __importDefault(require("./Middleware/Port_error"));
 const server_1 = require("./Configurations/server");
 const app = (0, express_1.default)();
 app.use((0, morgan_1.default)("tiny"));
-app.use(express_1.json, (0, express_1.urlencoded)({ extended: true }), express_1.json);
+app.use((0, express_1.json)(), (0, express_1.urlencoded)({ extended: true }));
 app.use(server_1.limiter);
 app.use((0, cookie_parser_1.default)());
 app.use(server_1.corsOptins);

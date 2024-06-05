@@ -5,7 +5,7 @@ const initialVal: formDataI = {
   last_name: "",
   phone_no: "",
   email: "",
-  // subject: "",
+  subject: "",
   message: "",
 };
 
@@ -15,7 +15,7 @@ const validateee = (values: formDataI) => {
     last_name: "",
     phone_no: "",
     email: "",
-    // subject: "",
+    subject: "",
     message: "",
   };
 
@@ -74,23 +74,23 @@ const validateee = (values: formDataI) => {
   //   return errors;
   // }
 
-  // //   Subject
-  // if (!values.subject) {
-  //   errors.subject = "Required";
-  //   return errors;
-  // }
-  // if (values.subject.length > 40) {
-  //   errors.subject = "Must be 40 characters or less";
-  //   return errors;
-  // }
-  // if (values.subject.length < 10) {
-  //   errors.subject = "Must have minimum 10 characters";
-  //   return errors;
-  // }
-  // if (!values.subject.match(regXSentence)) {
-  //   errors.subject = "Should contain only alphabets";
-  //   return errors;
-  // }
+  //   Subject
+  if (!values.subject) {
+    errors.subject = "Required";
+    return errors;
+  }
+  if (values.subject.length > 40) {
+    errors.subject = "Must be 40 characters or less";
+    return errors;
+  }
+  if (values.subject.length < 10) {
+    errors.subject = "Must have minimum 10 characters";
+    return errors;
+  }
+  if (!values.subject.match(regXSentence)) {
+    errors.subject = "Should contain only alphabets";
+    return errors;
+  }
 
   //   Message
   if (values.message.length < 1) {

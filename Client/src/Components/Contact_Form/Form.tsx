@@ -4,7 +4,7 @@ import Submit_btn from "@components/Contact_Form/Submit_btn";
 import { formDataI } from "@utils/interfaces";
 import ResetButton from "./ResetButton";
 import Inputs from "./Inputs";
-// import Subject_comp from "./Subject";
+import Subject_comp from "./Subject";
 import Message_comp from "./Message_comp";
 import { initialVal, validateee } from "@utils/Form_Validation";
 
@@ -94,12 +94,12 @@ const Form = () => {
         />
 
         {/* subject */}
-        {/* <Subject_comp
+        <Subject_comp
           errName={validationerror.subject}
           val={formValues.subject}
           handleBlur={handleBlur}
           handleChange={handleChange}
-        /> */}
+        />
 
         {/* Message */}
         <Message_comp

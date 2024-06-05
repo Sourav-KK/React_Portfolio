@@ -10,7 +10,7 @@ import { corsOptins, helmetSecurity, limiter } from "./Configurations/server";
 const app: Express = express();
 
 app.use(morgan("tiny"));
-app.use(json, urlencoded({ extended: true }), json);
+app.use(json(), urlencoded({ extended: true }));
 app.use(limiter);
 app.use(cookie_parser());
 app.use(corsOptins);
@@ -28,4 +28,5 @@ app.listen(PORT_NO, () => {
 });
 
 app.use(error_middleware);
+
 app.use("/", Router);

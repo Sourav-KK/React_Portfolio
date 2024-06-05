@@ -12,7 +12,6 @@ const limiter = (0, express_rate_limit_1.rateLimit)({
     windowMs: 15 * 60 * 1000, // 15 minutes
     limit: 100,
     standardHeaders: "draft-7", // draft-6: `RateLimit-*` headers; draft-7: combined `RateLimit` header
-    legacyHeaders: false,
 });
 exports.limiter = limiter;
 const corsOptins = (0, cors_1.default)({
