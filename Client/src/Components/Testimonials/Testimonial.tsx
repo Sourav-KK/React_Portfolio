@@ -1,6 +1,5 @@
 import { lazy, Suspense } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { testimonialsI } from "@utils/interfaces";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
@@ -11,34 +10,11 @@ import "@styles/testimonial_style.css";
 // import required modules
 import { Keyboard, Pagination, Navigation, EffectFade } from "swiper/modules";
 import Spin from "@utils/Loaders/Spin";
+import { Testimonials } from "@utils/Constants";
 
 const Avatar = lazy(() => import("@components/Testimonials/Avatar"));
 
 const Testimonial = () => {
-  const testimonials: testimonialsI[] = [
-    {
-      img: "https://avatar.iran.liara.run/public/38",
-      quote:
-        " Lorem ipsum dolor sit amet consectetur adipisicing elit.tenetur odio fugit ea impedit ",
-      author: "-John Doe",
-      postion: "Lorem ipsum, font-mono, font-mono",
-    },
-    {
-      img: "https://avatar.iran.liara.run/public/90",
-      quote:
-        " Ltenetur odio fugit ea impedit orem ipsum dolor sit amet consectetur adipisicing elit.  ",
-      author: "-Doe John ",
-      postion: " Lorem ipsum, font-mono, font-mono",
-    },
-    {
-      img: "https://avatar.iran.liara.run/public/95",
-      quote:
-        "  Lamet consectetur adipisicing elit orem ipsum dolor sit amet consectetur adipisicing elit. tenetur odio fugit ea impedit  ",
-      author: "-Doe John Doe",
-      postion: "Lorem ipsum, font-mono, font-mono",
-    },
-  ];
-
   return (
     <>
       <div className="flex justify-center pt-10">
@@ -60,7 +36,7 @@ const Testimonial = () => {
         modules={[Keyboard, Pagination, Navigation, EffectFade]}
         className="mySwiper hover:cursor-grab"
       >
-        {testimonials.map((item, index) => (
+        {Testimonials.map((item, index) => (
           <SwiperSlide className="p-20 " key={index}>
             <div
               key={index}

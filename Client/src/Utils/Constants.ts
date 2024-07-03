@@ -17,15 +17,18 @@ import {
   SiReactrouter,
   SiDaisyui,
 } from "../Utils/React-icons";
-import { Nav_tagsI, ProjectDetailsI } from "./interfaces";
+import { Nav_tagsI, ProjectDetailsI, testimonialsI } from "./interfaces";
 
 import {
   URL_SHORTNER,
-  User_Management,
+  USER_MANAGEMENT,
   NETFLIX_CLONE,
   ECOMMERCE,
   IMAGE_EDITOR,
   QUIZ_APP,
+  AVATAR_A,
+  AVATAR_B,
+  AVATAR_C,
 } from "./Configs";
 // for navbar
 const AnchorStyle: string =
@@ -59,7 +62,7 @@ const ProjectDetails: ProjectDetailsI[] = [
   },
   {
     title: "User Management",
-    link: User_Management,
+    link: USER_MANAGEMENT,
 
     techs: ["Node.js", "React", "MongoDB", "Express.js", "Redux-Toolkit"],
   },
@@ -108,4 +111,28 @@ const Nav_tags: Nav_tagsI[] = [
   },
 ];
 
-export { AnchorStyle, Other_skils, ProjectDetails, Nav_tags };
+const Testimonials: testimonialsI[] = [
+  {
+    img: AVATAR_A,
+    quote:
+      " Lorem ipsum dolor sit amet consectetur adipisicing elit.tenetur odio fugit ea impedit ",
+    author: "-John Doe",
+    postion: "Lorem ipsum, font-mono, font-mono",
+  },
+  {
+    img: AVATAR_B,
+    quote:
+      " Ltenetur odio fugit ea impedit orem ipsum dolor sit amet consectetur adipisicing elit.  ",
+    author: "-Doe John ",
+    postion: " Lorem ipsum, font-mono, font-mono",
+  },
+  {
+    img: AVATAR_C,
+    quote:
+      "  Lamet consectetur adipisicing elit orem ipsum dolor sit amet consectetur adipisicing elit. tenetur odio fugit ea impedit  ",
+    author: "-Doe John Doe",
+    postion: "Lorem ipsum, font-mono, font-mono",
+  },
+];
+
+export { AnchorStyle, Other_skils, ProjectDetails, Nav_tags, Testimonials };
