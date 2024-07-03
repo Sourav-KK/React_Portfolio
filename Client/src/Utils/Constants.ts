@@ -17,49 +17,19 @@ import {
   SiReactrouter,
   SiDaisyui,
 } from "../Utils/React-icons";
+import { Nav_tagsI, ProjectDetailsI } from "./interfaces";
 
+import {
+  URL_SHORTNER,
+  User_Management,
+  NETFLIX_CLONE,
+  ECOMMERCE,
+  IMAGE_EDITOR,
+  QUIZ_APP,
+} from "./Configs";
 // for navbar
 const AnchorStyle: string =
   "text-white hover:text-slate-300 rounded-full px-5 py-2 text-xl transition-colors ease-in ";
-
-const ProjectArr = [
-  {
-    title: "URL Shortner",
-    link: "sdsd",
-    Description: "A backend work to shorten lenghty URLs",
-    techs: ["Node.js", "Express.js", "MongoDB"],
-    state: false,
-  },
-  {
-    title: "User Management",
-    link: "sdsd",
-    Description: "A interface to mointer & track users and their roles.",
-    techs: ["Node.js", "React", "MongoDB", "Express.js", "Redux-Toolkit"],
-    state: false,
-  },
-  {
-    title: "Netflix Clone",
-    link: "sdsd",
-    Description:
-      "A clone of the Netflix website using React by integrating API's",
-    techs: ["React", "Hooks", "APIs"],
-    state: false,
-  },
-  {
-    title: "Volta Ecommerce",
-    link: "sdsd",
-    Description: "Ecommerce website using Node.js",
-    techs: ["Node.js", "MongoDB", "Mongoose", "EJS", "Express.js"],
-    state: false,
-  },
-  {
-    title: "Todo",
-    link: "sdsd",
-    Description: "A simple Todo webapp using React",
-    techs: ["React", "Hooks", "APIs"],
-    state: false,
-  },
-];
 
 const Other_skils = [
   { Icon: TiHtml5, Title: "HTML5" },
@@ -81,4 +51,61 @@ const Other_skils = [
   { Icon: SiReactrouter, Title: "React router" },
 ];
 
-export { AnchorStyle, ProjectArr, Other_skils };
+const ProjectDetails: ProjectDetailsI[] = [
+  {
+    title: "URL Shortner",
+    link: URL_SHORTNER,
+    techs: ["Node.js", "Express.js", "MongoDB"],
+  },
+  {
+    title: "User Management",
+    link: User_Management,
+
+    techs: ["Node.js", "React", "MongoDB", "Express.js", "Redux-Toolkit"],
+  },
+  {
+    title: "Netflix Clone",
+    link: NETFLIX_CLONE,
+
+    techs: ["React", "Hooks", "APIs"],
+  },
+  {
+    title: "Ecommerce website",
+    link: ECOMMERCE,
+
+    techs: ["Node.js", "MongoDB", "Mongoose", "EJS", "Express.js"],
+  },
+  {
+    title: "Image Editor",
+    link: IMAGE_EDITOR,
+
+    techs: ["React", "CSS3", "Typescript"],
+  },
+  {
+    title: "Quiz App",
+    link: QUIZ_APP,
+
+    techs: ["React", "Redux-Toolkit", "Typescript"],
+  },
+];
+
+const Nav_tags: Nav_tagsI[] = [
+  {
+    title: "About",
+    id: "#aboutSection",
+  },
+  {
+    title: "Skills",
+    id: "#skillSection",
+  },
+  {
+    title: "Projects",
+    id: "#project_section",
+  },
+  {
+    title: "Contact",
+    id: "#contactSection",
+  },
+];
+
+export { AnchorStyle, Other_skils, ProjectDetails, Nav_tags };

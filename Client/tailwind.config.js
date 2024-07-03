@@ -26,6 +26,7 @@ export default {
           100: "#EDD796",
           150: "#F2DDA1",
         },
+        oppBlue: " #F8A67A",
       },
       animation: {
         "infinite-scroll": "infinite-scroll 32s linear infinite",

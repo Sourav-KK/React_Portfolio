@@ -1,36 +1,23 @@
-import { useState } from "react";
-import { ProjectArr } from "@utils/Constants";
-import Heading from "./Heading";
-import Website_btn from "./Website_btn";
-import Proj_Description from "./Proj_Description";
-import Proj_title from "./Proj_title";
-import Proj_lang from "./Proj_lang";
-import { ProjectArrI } from "@utils/interfaces";
+import { ProjectDetails } from "@utils/Constants";
+import "Style/project.css";
+import Trial_Project from "./Trial_Project";
 
-const Sample = () => {
-  const [projectDetails] = useState<ProjectArrI[]>(ProjectArr);
-
+const ProjectTrial = () => {
   return (
-    <div className="grid grid-cols-1 pl-20 pr-20 pb-10 gap-y-8 bg-golden-100">
-      <Heading />
-      <div className="grid grid-cols-1 md:grid-cols-3  place-items-center gap-4 p-2">
-        {projectDetails.map((item, index) => (
-          <div
-            className="grid grid-cols-1 w-1/2 md:w-5/6 min-h-80 max-h-98 gap-y-2 rounded-lg hover:shadow-2xl hover:shadow-slate-900 p-4 bg-slate-50"
-            key={index}
-          >
-            <Proj_title title={item.title} />
-
-            <Proj_Description Description={item.Description} />
-
-            <Proj_lang techs={item.techs} />
-
-            <Website_btn link={item.link} />
-          </div>
-        ))}
+    <div
+      className="flex justify-center place-content-center bg-oppBlue p-14 "
+      id="project_section"
+    >
+      <div className="ag-format-container">
+        <p className="project-title text-zinc-50">PROJECTS</p>
+        <div className="ag-courses_box">
+          {ProjectDetails.map((item, index) => (
+            <Trial_Project key={index} item={item} />
+          ))}
+        </div>
       </div>
     </div>
   );
 };
 
-export default Sample;
+export default ProjectTrial;

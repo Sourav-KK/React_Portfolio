@@ -20,3 +20,14 @@ export interface ProjectArrI {
   Description: string;
   techs: string[];
 }
+
+export interface ProjectDetailsI {
+  title: string;
+  link: string;
+  techs: string[];
+}
+
+export interface Nav_tagsI {
+  title: string;
+  id: string;
+}

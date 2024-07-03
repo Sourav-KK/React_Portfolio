@@ -3,28 +3,10 @@ import { useState } from "react";
 import Logo from "@assets/new_logo.png";
 import AnchorTag from "@utils/AnchorTag";
 import Svg_Com from "./Svg";
+import { Nav_tags } from "@utils/Constants";
 
 const Nav = () => {
   const [toggle, setToggle] = useState<boolean>(false);
-
-  const tittless = [
-    {
-      title: "About",
-      id: "#aboutSection",
-    },
-    {
-      title: "Skills",
-      id: "#skillSection",
-    },
-    {
-      title: "Projects",
-      id: "#projectSection",
-    },
-    {
-      title: "Contact",
-      id: "#contactSection",
-    },
-  ];
 
   const handleClick = (link: string) => {
     const elementID = document.querySelector(link);
@@ -54,12 +36,8 @@ const Nav = () => {
         </div>
         <div className="space-x-4">
           <div className="ssm:hidden lg:block space-x-2 ">
-            {tittless.map((elem, index) => (
-              <AnchorTag
-                link={elem.id}
-                title={elem.title}
-                key={index}
-              />
+            {Nav_tags.map((elem, index) => (
+              <AnchorTag link={elem.id} title={elem.title} key={index} />
             ))}
           </div>
           <div className="ssm:block lg:hidden">
@@ -80,7 +58,7 @@ const Nav = () => {
         {toggle && (
           <div className="flex justify-between ml-10 pt-4 border-t-2 border-b-2 w-[80%] p-2">
             <ul className="w-full">
-              {tittless.map((elem, index) => (
+              {Nav_tags.map((elem, index) => (
                 <li
                   key={index}
                   onClick={() => handleClick(elem.id)}
