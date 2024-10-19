@@ -1,12 +1,12 @@
 import Footer from "@components/Footer";
 import Skills from "@components/Skills/Real_Skills";
 import About from "@components/About";
-// import Contact_form from "@components/Contact_Form/Contact_form";
 import Testimonial from "@components/Testimonials/Testimonial";
 import ScrollToTop from "@components/ScrollTop/ScrollTop";
 import Nav_Hero from "@components/Nav_Hero";
 import ErrorBoundary from "@components/Fallback_UI/Classs";
 import Project from "@components/Project";
+import Form_contact from "@components/FormComp/Form_contact";
 
 function App() {
   return (
@@ -17,8 +17,9 @@ function App() {
         <About />
         <Skills />
         <Project />
+
         <Testimonial />
-        {/* <Contact_form /> */}
+        <Form_contact />
         <Footer />
       </ErrorBoundary>
     </div>

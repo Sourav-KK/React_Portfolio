@@ -8,7 +8,7 @@ const Avatar = ({ img, altText }: { img: string; altText: string }) => {
   return (
     <div className="avatar w-full flex justify-center items-center p-3">
       <Suspense fallback={<Spin />}>
-        <div className="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+        <picture className="size-12 md:size-20 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
           <img
             src={img}
             alt={altText}
@@ -17,7 +17,7 @@ const Avatar = ({ img, altText }: { img: string; altText: string }) => {
               (e.target as HTMLImageElement).src = default_dp;
             }}
           />
-        </div>
+        </picture>
       </Suspense>
     </div>
   );

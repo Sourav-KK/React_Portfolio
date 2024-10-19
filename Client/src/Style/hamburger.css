@@ -1,0 +1,17 @@
+/* #hamToggle {
+      opacity: 0;
+}
+
+#dropDown {
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+      visibility: hidden;
+
+}
+
+#nav-sm-block {
+      opacity: 0;
+      position: relative;
+      height: 100vh;
+      z-index: 0;
+} */

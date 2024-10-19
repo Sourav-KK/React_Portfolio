@@ -19,12 +19,14 @@ const Trial_Project = ({ item }: { item: ProjectDetailsI }) => {
       >
         <div className="ag-courses-item_bg"></div>
 
-        <div className="ag-courses-item_title">{item.title} </div>
+        <div className="ag-courses-item_title text-lg md:text-3xl">
+          {item.title}
+        </div>
 
         <div className="ag-courses-item_date-box">
           {item.techs.map((tech, index) => (
             <span className="ag-courses-item_date" key={index}>
-              {tech},{" "}
+              {tech},
             </span>
           ))}
         </div>

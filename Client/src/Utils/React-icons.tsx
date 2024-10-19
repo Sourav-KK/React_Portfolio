@@ -37,6 +37,7 @@ import {
   SiVite,
   SiDaisyui,
   SiReactrouter,
+  SiNextdotjs 
 } from "react-icons/si";
 export {
   IoLogoJavascript,
@@ -47,6 +48,7 @@ export {
   FaNode,
   IoLogoReact,
   SiTypescript,
+  SiNextdotjs,
   TiHtml5,
   SiPostman,
   SiRedux,

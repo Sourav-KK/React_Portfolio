@@ -8,6 +8,8 @@ https://alvarotrigo.com/blog/web-developer-portfolio-examples/
 https://github.com/Dorota1997/react-frontend-dev-portfolio
 https://chaseohlson.com/
 https://mattfarley.ca/
+https://www.codewithfaraz.com/preview/personal-portfolio-website-a-step-by-step-guide-with-html-css-and-javascript 
+https://timmyomahony.com/ 
 
 <!-- logo design -->
 
@@ -27,3 +29,12 @@ https://dev.to/cruip_com/create-an-infinite-horizontal-scroll-animation-with-tai
 
 https://stackabuse.com/how-to-scroll-to-top-in-react-with-a-button-component/
 https://dev.to/silviaespanagil/how-to-create-a-scroll-to-top-button-with-react-17do
+
+<!-- Highlight Nav Menu on scroll with JavaScript -->
+
+https://www.youtube.com/watch?v=RsPWEmfOQdU
+
+<!-- Card hover Effect -->
+
+https://wpdean.com/css-card-hover-effects/
+https://codepen.io/keubibo/pen/yLXYVOK

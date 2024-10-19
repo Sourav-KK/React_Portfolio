@@ -7,18 +7,18 @@ const InfinityScroll = ({ ariaVal }: { ariaVal: boolean }) => {
       aria-hidden={ariaVal}
     >
       {Other_skils.map((elem, index) => (
-        <div key={index}>
-          <li>
+        <div key={index} className="flex flex-col justify-around">
+          <li className="flex flex-col justify-center place-items-center">
             <elem.Icon
               title={elem.Title}
               size={40}
               color="#eeeee4"
-              className={`hover:scale-105 flex justify-center items-center`}
+              className={`hover:scale-105 flex justify-center items-center size-8 md:size-12`}
             />
           </li>
-          <li className="text-sm font-mono font-light text-clip text-white text-center">
+          {/* <li className="text-sm font-mono font-light text-clip text-white text-center">
             {elem.Title}
-          </li>
+          </li> */}
         </div>
       ))}
     </ul>
